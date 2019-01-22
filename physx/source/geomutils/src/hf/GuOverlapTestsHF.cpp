@@ -42,11 +42,11 @@
 #include "GuDistanceSegmentSegment.h"
 #include "GuDistanceSegmentSegmentSIMD.h"
 
-#include "PxSphereGeometry.h"
-#include "PxBoxGeometry.h"
-#include "PxCapsuleGeometry.h"
-#include "PxPlaneGeometry.h"
-#include "PxConvexMeshGeometry.h"
+#include "geometry/PxSphereGeometry.h"
+#include "geometry/PxBoxGeometry.h"
+#include "geometry/PxCapsuleGeometry.h"
+#include "geometry/PxPlaneGeometry.h"
+#include "geometry/PxConvexMeshGeometry.h"
 
 #include "GuCapsule.h"
 #include "GuEdgeCache.h"

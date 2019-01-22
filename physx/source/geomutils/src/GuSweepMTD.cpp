@@ -29,7 +29,7 @@
 
 #include "GuHeightFieldUtil.h"
 #include "GuEntityReport.h"
-#include "PxConvexMeshGeometry.h"
+#include "geometry/PxConvexMeshGeometry.h"
 #include "GuConvexMesh.h"
 #include "GuSweepSharedTests.h"  
 #include "GuConvexUtilsInternal.h"

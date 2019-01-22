@@ -28,7 +28,7 @@
 // Copyright (c) 2001-2004 NovodeX AG. All rights reserved.  
 
 #include "GuContactMethodImpl.h"
-#include "GuContactBuffer.h"
+#include "geomutils/GuContactBuffer.h"
 #include "GuInternal.h"
 #include "GuSegment.h"
 #include "GuGeometryUnion.h"

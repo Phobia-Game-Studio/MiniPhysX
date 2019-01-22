@@ -37,7 +37,7 @@
 #include "ScbBase.h"
 
 // PX_SERIALIZATION
-#include "PxSerialFramework.h"
+#include "common/PxSerialFramework.h"
 //~PX_SERIALIZATION
 
 namespace physx

@@ -32,7 +32,7 @@
 #define PX_BVH_STRUCTURE_BUILDER_H
 
 #include "PsUserAllocated.h"
-#include "PxCooking.h"
+#include "cooking/PxCooking.h"
 #include "GuBVHStructure.h"
 
 namespace physx

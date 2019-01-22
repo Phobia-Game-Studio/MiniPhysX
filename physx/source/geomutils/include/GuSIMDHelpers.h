@@ -30,7 +30,7 @@
 #ifndef GU_SIMD_HELPERS_H
 #define GU_SIMD_HELPERS_H
 
-#include "PxPhysXCommonConfig.h"
+#include "common/PxPhysXCommonConfig.h"
 #include "CmPhysXCommon.h"
 #include "geometry/PxTriangle.h"
 #include "foundation/PxMat33.h"

@@ -39,7 +39,7 @@
 #include "PsUtilities.h"
 
 // PX_SERIALIZATION
-#include "PxSerialFramework.h"
+#include "common/PxSerialFramework.h"
 //~PX_SERIALIZATION
 
 #include "ScbDefs.h"

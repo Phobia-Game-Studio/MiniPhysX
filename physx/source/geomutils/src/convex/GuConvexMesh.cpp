@@ -38,7 +38,7 @@
 #include "GuSerialize.h"
 #include "GuMeshFactory.h"
 #include "CmUtils.h"
-#include "PxMeshScale.h"
+#include "geometry/PxMeshScale.h"
 #include "PsAllocator.h"
 #include "PsFoundation.h"
 

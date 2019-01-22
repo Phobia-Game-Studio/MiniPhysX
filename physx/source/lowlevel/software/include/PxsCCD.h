@@ -28,7 +28,7 @@
 // Copyright (c) 2001-2004 NovodeX AG. All rights reserved.  
 
 #include "Ps.h"
-#include "PxGeometry.h"
+#include "geometry/PxGeometry.h"
 #include "GuCCDSweepConvexMesh.h"
 #include "PsHashMap.h"
 #include "PxsIslandSim.h"

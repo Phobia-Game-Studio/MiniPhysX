@@ -33,7 +33,7 @@
 #include "CmPhysXCommon.h"
 #include "foundation/PxSimpleTypes.h"
 #include "PxQueryReport.h"
-#include "PxGeometry.h"
+#include "geometry/PxGeometry.h"
 
 namespace physx
 {

@@ -37,7 +37,7 @@
 #include "foundation/PxVec3.h"
 #include "foundation/PxTransform.h"
 #include "DyFrictionPatch.h"
-#include "GuContactBuffer.h"
+#include "geomutils/GuContactBuffer.h"
 #include "foundation/PxBounds3.h"
 
 namespace physx

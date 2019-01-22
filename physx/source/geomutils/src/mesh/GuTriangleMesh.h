@@ -31,13 +31,13 @@
 #define GU_TRIANGLEMESH_H
 
 #include "foundation/PxIO.h"
-#include "PxSimpleTriangleMesh.h"
-#include "PxTriangleMeshGeometry.h"
+#include "geometry/PxSimpleTriangleMesh.h"
+#include "geometry/PxTriangleMeshGeometry.h"
 #include "CmScaling.h"
 #include "GuTriangle32.h"
 #include "CmRefCountable.h"
-#include "PxTriangle.h"
-#include "PxTriangleMesh.h"
+#include "geometry/PxTriangle.h"
+#include "geometry/PxTriangleMesh.h"
 #include "CmRenderOutput.h"
 #include "GuMeshData.h"
 #include "GuCenterExtents.h"

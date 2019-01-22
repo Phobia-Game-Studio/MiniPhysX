@@ -34,7 +34,7 @@
 #include "GuBox.h"
 #include "GuVecPlane.h"
 #include "PsMathUtils.h"
-#include "PxCapsuleGeometry.h"
+#include "geometry/PxCapsuleGeometry.h"
 #include "PsVecMath.h"
 using namespace physx::shdfnd::aos;
 

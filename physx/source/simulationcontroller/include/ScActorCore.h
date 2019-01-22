@@ -33,7 +33,7 @@
 
 #include "PsUserAllocated.h"
 #include "CmPhysXCommon.h"
-#include "PxMetaData.h"
+#include "common/PxMetaData.h"
 #include "PxActor.h"
 
 namespace physx

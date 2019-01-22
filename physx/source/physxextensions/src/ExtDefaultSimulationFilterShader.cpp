@@ -28,7 +28,7 @@
 // Copyright (c) 2001-2004 NovodeX AG. All rights reserved.  
 
 
-#include "PxDefaultSimulationFilterShader.h"
+#include "extensions/PxDefaultSimulationFilterShader.h"
 #include "PsIntrinsics.h"
 #include "PxRigidActor.h"
 #include "PxShape.h"

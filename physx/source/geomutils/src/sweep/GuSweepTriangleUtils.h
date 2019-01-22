@@ -33,7 +33,7 @@
 #include "CmPhysXCommon.h"
 #include "GuSweepSharedTests.h"
 #include "GuInternal.h"
-#include "PxTriangle.h"
+#include "geometry/PxTriangle.h"
 #include "PxQueryReport.h"
 
 namespace physx

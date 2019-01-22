@@ -28,7 +28,7 @@
 // Copyright (c) 2001-2004 NovodeX AG. All rights reserved.  
 
 #include "foundation/PxIO.h"
-#include "PxJoint.h"
+#include "extensions/PxJoint.h"
 #include "ExtJoint.h"
 #include "ExtD6Joint.h"
 #include "ExtFixedJoint.h"

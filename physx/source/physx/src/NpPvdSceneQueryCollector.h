@@ -33,7 +33,7 @@
 #include "CmPhysXCommon.h"
 #include "PsArray.h"
 #include "PxFiltering.h"
-#include "PxGeometryHelpers.h"
+#include "geometry/PxGeometryHelpers.h"
 #include "PxQueryReport.h"
 #include "PxBatchQueryDesc.h"
 

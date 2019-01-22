@@ -33,7 +33,7 @@
 #include "GuConvexEdgeFlags.h"
 #include "GuSeparatingAxes.h"
 #include "GuContactMethodImpl.h"
-#include "GuContactBuffer.h"
+#include "geomutils/GuContactBuffer.h"
 #include "GuMidphaseInterface.h"
 #include "GuConvexHelper.h"
 #include "GuTriangleCache.h"

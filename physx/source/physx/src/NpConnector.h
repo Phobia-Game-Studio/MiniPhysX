@@ -33,7 +33,7 @@
 
 #include "CmPhysXCommon.h"
 #include "PsInlineArray.h"
-#include "PxSerialFramework.h"
+#include "common/PxSerialFramework.h"
 #include "CmUtils.h"
 #include "PsUtilities.h"
 

@@ -33,7 +33,7 @@
 #include "foundation/PxAssert.h"
 #include "foundation/PxTransform.h"
 #include "foundation/PxMat33.h"
-#include "PxJointLimit.h"
+#include "extensions/PxJointLimit.h"
 #include "ExtJoint.h"
 
 namespace physx

@@ -30,7 +30,7 @@
 #include "foundation/PxMemory.h"
 #include "CmPhysXCommon.h"
 #include "GuPersistentContactManifold.h"
-#include "GuContactBuffer.h"
+#include "geomutils/GuContactBuffer.h"
 #include "PsAllocator.h"
 #include "PsVecTransform.h"
 #include "PsUtilities.h"

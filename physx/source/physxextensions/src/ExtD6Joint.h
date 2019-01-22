@@ -31,7 +31,7 @@
 #define NP_D6JOINTCONSTRAINT_H
 
 #include "ExtJoint.h"
-#include "PxD6Joint.h"
+#include "extensions/PxD6Joint.h"
 #include "PsMathUtils.h"
 
 namespace physx

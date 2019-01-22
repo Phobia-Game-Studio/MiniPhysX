@@ -30,7 +30,7 @@
 #include "foundation/PxVec4.h"
 #include "GuBV32Build.h"
 #include "GuBV32.h"
-#include "PxTriangle.h"
+#include "geometry/PxTriangle.h"
 #include "CmPhysXCommon.h"
 #include "PsBasicTemplates.h"
 #include "GuCenterExtents.h"

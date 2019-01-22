@@ -39,7 +39,7 @@
 #include "PxvGeometry.h"			// for PxsShapeCore
 #include "CmFlushPool.h"
 #include "CmTask.h"
-#include "PxTriangleMesh.h"
+#include "geometry/PxTriangleMesh.h"
 #include "PxsMaterialManager.h"
 #include "PxsTransformCache.h"
 #include "GuPersistentContactManifold.h"

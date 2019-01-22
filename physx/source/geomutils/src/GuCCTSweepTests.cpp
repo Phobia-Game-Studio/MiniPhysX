@@ -30,7 +30,7 @@
 #include "GuSweepTests.h"
 #include "GuHeightFieldUtil.h"
 #include "GuEntityReport.h"
-#include "PxSphereGeometry.h"
+#include "geometry/PxSphereGeometry.h"
 #include "GuDistanceSegmentBox.h"
 #include "GuDistancePointBox.h"
 #include "GuSweepBoxSphere.h"

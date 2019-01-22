@@ -29,7 +29,7 @@
 #define PX_CONVX_METADATA_H
 
 #include "SnConvX_Output.h"
-#include "PxMetaDataFlags.h"
+#include "common/PxMetaDataFlags.h"
 
 namespace physx { namespace Sn {
 

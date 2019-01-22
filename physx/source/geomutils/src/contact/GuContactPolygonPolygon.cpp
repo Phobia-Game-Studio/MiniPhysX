@@ -30,7 +30,7 @@
 #include "foundation/PxMemory.h"
 #include "GuContactPolygonPolygon.h"
 #include "GuShapeConvex.h"
-#include "GuContactBuffer.h"
+#include "geomutils/GuContactBuffer.h"
 #include "PsMathUtils.h"
 #include "PsAllocator.h"
 #include "PsFPU.h"

@@ -31,7 +31,7 @@
 #define PXC_MATERIALMETHOD_H
 
 #include "CmPhysXCommon.h"
-#include "PxGeometry.h"
+#include "geometry/PxGeometry.h"
 
 namespace physx
 {

@@ -29,7 +29,7 @@
 
 #include "GuDistancePointTriangle.h"
 #include "GuContactMethodImpl.h"
-#include "GuContactBuffer.h"
+#include "geomutils/GuContactBuffer.h"
 #include "GuGeometryUnion.h"
 #include "GuFeatureCode.h"
 #include "GuMidphaseInterface.h"

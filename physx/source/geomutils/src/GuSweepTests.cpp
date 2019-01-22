@@ -28,7 +28,7 @@
 // Copyright (c) 2001-2004 NovodeX AG. All rights reserved.  
 
 #include "GuSweepTests.h"
-#include "PxSphereGeometry.h"
+#include "geometry/PxSphereGeometry.h"
 #include "GuVecCapsule.h"
 #include "GuVecBox.h"
 #include "GuVecTriangle.h"

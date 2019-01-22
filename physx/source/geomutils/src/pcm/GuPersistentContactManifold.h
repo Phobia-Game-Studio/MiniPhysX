@@ -30,7 +30,7 @@
 #ifndef Gu_PERSISTENTCONTACTMANIFOLD_H
 #define Gu_PERSISTENTCONTACTMANIFOLD_H
 
-#include "PxPhysXCommonConfig.h"
+#include "common/PxPhysXCommonConfig.h"
 #include "foundation/PxUnionCast.h"
 #include "foundation/PxMemory.h"
 #include "CmPhysXCommon.h"

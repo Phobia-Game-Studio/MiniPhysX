@@ -44,9 +44,9 @@
 
 #include "SqPruningStructure.h"
 
-#include "PxBase.h"
-#include "PxSerialFramework.h"
-#include "PxSerializer.h"
+#include "common/PxBase.h"
+#include "common/PxSerialFramework.h"
+#include "common/PxSerializer.h"
 #include "PxPhysicsSerialization.h"
 
 namespace physx

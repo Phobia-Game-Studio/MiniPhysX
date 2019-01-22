@@ -35,7 +35,7 @@
 #include "CmPhysXCommon.h"
 #include "PsUserAllocated.h"
 #include "DyArticulation.h"
-#include "PxMetaData.h"
+#include "common/PxMetaData.h"
 
 namespace physx
 {

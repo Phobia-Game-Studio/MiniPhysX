@@ -31,7 +31,7 @@
 #define GU_CONTACTMETHODIMPL_H
 
 #include "foundation/PxAssert.h"
-#include "PxPhysXCommonConfig.h"
+#include "common/PxPhysXCommonConfig.h"
 #include "CmPhysXCommon.h"
 #include "collision/PxCollisionDefs.h"
 

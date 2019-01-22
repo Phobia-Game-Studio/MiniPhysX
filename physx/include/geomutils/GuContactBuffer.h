@@ -32,7 +32,7 @@
 
 #include "PxPhysXConfig.h"
 #include "PxContact.h"
-#include "GuContactPoint.h"
+#include "geomutils/GuContactPoint.h"
 
 namespace physx
 {

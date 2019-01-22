@@ -37,7 +37,7 @@
 #include "GuContactMethodImpl.h"
 #include "GuPCMContactGen.h"
 #include "GuPCMShapeConvex.h"
-#include "GuContactBuffer.h"
+#include "geomutils/GuContactBuffer.h"
 
 
 

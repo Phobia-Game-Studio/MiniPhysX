@@ -30,7 +30,7 @@
 #ifndef GU_VEC_CONVEXHULL_H
 #define GU_VEC_CONVEXHULL_H
 
-#include "PxPhysXCommonConfig.h"
+#include "common/PxPhysXCommonConfig.h"
 #include "GuVecConvex.h"
 #include "GuConvexMeshData.h"
 #include "GuBigConvexData.h"
@@ -39,7 +39,7 @@
 #include "PsFPU.h"
 #include "GuGeometryUnion.h"
 #include "PsVecQuat.h"
-#include "PxMeshScale.h"
+#include "geometry/PxMeshScale.h"
 
 namespace physx
 {

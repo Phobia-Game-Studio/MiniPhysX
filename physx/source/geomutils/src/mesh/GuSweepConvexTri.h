@@ -33,7 +33,7 @@
 #include "GuVecTriangle.h"
 #include "GuVecConvexHull.h"
 #include "GuConvexMesh.h"
-#include "PxConvexMeshGeometry.h"
+#include "geometry/PxConvexMeshGeometry.h"
 #include "GuGJKRaycast.h"
 
 // return true if hit, false if no hit

@@ -38,14 +38,14 @@
 #include "PsMathUtils.h"
 #include "GuIntersectionBoxBox.h"
 #include "GuDistanceSegmentBox.h"
-#include "PxMeshQuery.h"
+#include "geometry/PxMeshQuery.h"
 #include "PsFPU.h"
 
 // PT: TODO: remove those includes.... shouldn't be allowed from here
-#include "PxControllerObstacles.h"	// (*)
+#include "characterkinematic/PxControllerObstacles.h"	// (*)
 #include "CctInternalStructs.h"		// (*)
-#include "PxControllerManager.h"	// (*)
-#include "PxControllerBehavior.h"	// (*)
+#include "characterkinematic/PxControllerManager.h"	// (*)
+#include "characterkinematic/PxControllerBehavior.h"	// (*)
 
 //#define DEBUG_MTD
 #ifdef DEBUG_MTD
@@ -1968,7 +1968,7 @@ PxControllerCollisionFlags SweepTest::moveCharacter(
 #include "CctCharacterControllerManager.h"
 #include "PxActor.h"
 #include "PxScene.h"
-#include "PxControllerBehavior.h"
+#include "characterkinematic/PxControllerBehavior.h"
 #include "CctObstacleContext.h"
 
 	// PT: we use a local class instead of making "Controller" a PxQueryFilterCallback, since it would waste more memory.

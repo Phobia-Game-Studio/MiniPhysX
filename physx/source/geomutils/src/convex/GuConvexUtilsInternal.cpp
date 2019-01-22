@@ -32,7 +32,7 @@
 #include "foundation/PxBounds3.h"
 #include "CmScaling.h"
 #include "GuBoxConversion.h"
-#include "PxConvexMeshGeometry.h"
+#include "geometry/PxConvexMeshGeometry.h"
 #include "GuConvexMesh.h"
 
 using namespace physx;

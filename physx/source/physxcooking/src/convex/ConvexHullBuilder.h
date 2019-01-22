@@ -33,7 +33,7 @@
 
 #include "GuConvexMeshData.h"
 #include "PsUserAllocated.h"
-#include "PxCooking.h"
+#include "cooking/PxCooking.h"
 
 namespace physx
 {

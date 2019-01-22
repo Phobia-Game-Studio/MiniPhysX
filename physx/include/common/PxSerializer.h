@@ -34,8 +34,8 @@
 @{
 */
 
-#include "PxSerialFramework.h"
-#include "PxCollection.h"
+#include "common/PxSerialFramework.h"
+#include "common/PxCollection.h"
 #include "foundation/PxAssert.h"
 
 #if !PX_DOXYGEN

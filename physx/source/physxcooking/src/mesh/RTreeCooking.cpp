@@ -35,7 +35,7 @@
 #include "PsMathUtils.h"
 #include "PsAllocator.h"
 #include "PsVecMath.h"
-#include "PxTolerancesScale.h"
+#include "common/PxTolerancesScale.h"
 #include "QuickSelect.h"
 #include "PsInlineArray.h"
 #include "GuRTree.h"

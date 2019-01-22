@@ -31,7 +31,7 @@
 #define GU_HILL_CLIMBING_H
 
 #include "Ps.h"
-#include "PxPhysXCommonConfig.h"
+#include "common/PxPhysXCommonConfig.h"
 
 namespace physx
 {

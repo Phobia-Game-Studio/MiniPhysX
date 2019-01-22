@@ -35,7 +35,7 @@
 #include "PxMaterial.h"
 #include "PsUserAllocated.h"
 #include "CmPhysXCommon.h"
-#include "PxMetaData.h"
+#include "common/PxMetaData.h"
 #include "PsUtilities.h"
 
 namespace physx

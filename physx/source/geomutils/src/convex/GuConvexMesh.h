@@ -31,14 +31,14 @@
 #define GU_COLLISION_CONVEXMESH_H
 
 #include "foundation/PxBitAndData.h"
-#include "PxConvexMesh.h"
+#include "geometry/PxConvexMesh.h"
 #include "CmPhysXCommon.h"
 #include "PsUserAllocated.h"
 #include "CmRefCountable.h"
 #include "GuConvexMeshData.h"
 
 // PX_SERIALIZATION
-#include "PxMetaData.h"
+#include "common/PxMetaData.h"
 #include "CmRenderOutput.h"
 //~PX_SERIALIZATION
 

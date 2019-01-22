@@ -34,7 +34,7 @@
 /** \cond */
 
 #include "CctController.h"
-#include "PxCapsuleController.h"
+#include "characterkinematic/PxCapsuleController.h"
 
 namespace physx
 {

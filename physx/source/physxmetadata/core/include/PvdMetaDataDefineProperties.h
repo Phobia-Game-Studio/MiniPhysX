@@ -35,7 +35,7 @@
 #include "PvdMetaDataPropertyVisitor.h"
 #include "PxPvdDataStreamHelpers.h"
 #include "PxPvdDataStream.h"
-#include "PxCoreUtilityTypes.h"
+#include "common/PxCoreUtilityTypes.h"
 
 
 namespace physx

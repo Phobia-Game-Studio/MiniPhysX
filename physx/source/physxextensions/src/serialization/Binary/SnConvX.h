@@ -29,8 +29,8 @@
 #define PX_CONVX_H
 
 #include "foundation/PxErrors.h"
-#include "PxBinaryConverter.h"
-#include "PxTypeInfo.h"
+#include "extensions/PxBinaryConverter.h"
+#include "common/PxTypeInfo.h"
 #include "CmPhysXCommon.h"
 #include "PsUserAllocated.h"
 #include "PsArray.h"

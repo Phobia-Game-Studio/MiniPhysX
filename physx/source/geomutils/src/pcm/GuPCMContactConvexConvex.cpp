@@ -36,7 +36,7 @@
 #include "GuContactMethodImpl.h"
 #include "GuPCMShapeConvex.h"
 #include "GuPCMContactGen.h"
-#include "GuContactBuffer.h"
+#include "geomutils/GuContactBuffer.h"
 
 
 namespace physx

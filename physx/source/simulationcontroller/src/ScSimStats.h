@@ -34,7 +34,7 @@
 #include "PsAtomic.h"
 #include "PsUserAllocated.h"
 #include "CmPhysXCommon.h"
-#include "PxGeometry.h"
+#include "geometry/PxGeometry.h"
 #include "PxSimulationStatistics.h"
 
 namespace physx

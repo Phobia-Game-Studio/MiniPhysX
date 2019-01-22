@@ -34,7 +34,7 @@
 #include "GuInternal.h"
 #include "GuContactMethodImpl.h"
 #include "GuFeatureCode.h"
-#include "GuContactBuffer.h"
+#include "geomutils/GuContactBuffer.h"
 #include "GuMidphaseInterface.h"
 #include "GuEntityReport.h"
 #include "GuHeightFieldUtil.h"

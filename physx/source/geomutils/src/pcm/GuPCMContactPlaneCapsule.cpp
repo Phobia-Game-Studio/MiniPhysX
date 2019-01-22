@@ -32,7 +32,7 @@
 #include "GuGeometryUnion.h"
 
 #include "GuContactMethodImpl.h"
-#include "GuContactBuffer.h"
+#include "geomutils/GuContactBuffer.h"
 #include "GuPersistentContactManifold.h"
 
 namespace physx

@@ -35,7 +35,7 @@
 #include "PxRigidStatic.h"
 #include "ScbRigidStatic.h"
 
-#include "PxMetaData.h"
+#include "common/PxMetaData.h"
 
 namespace physx
 {

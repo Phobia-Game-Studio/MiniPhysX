@@ -29,7 +29,7 @@
 
 #include "GuConvexMeshData.h"
 #include "GuContactMethodImpl.h"
-#include "GuContactBuffer.h"
+#include "geomutils/GuContactBuffer.h"
 #include "GuGeometryUnion.h"
 #include "CmScaling.h"
 

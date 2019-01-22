@@ -31,7 +31,7 @@
 #include "ExtConstraintHelper.h"
 #include "CmRenderOutput.h"
 #include "CmConeLimitHelper.h"
-#include "PxTolerancesScale.h"
+#include "common/PxTolerancesScale.h"
 #include "CmUtils.h"
 #include "PxConstraint.h"
 

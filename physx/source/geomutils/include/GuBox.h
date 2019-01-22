@@ -34,7 +34,7 @@
 @{
 */
 
-#include "PxPhysXCommonConfig.h"
+#include "common/PxPhysXCommonConfig.h"
 #include "CmPhysXCommon.h"
 #include "CmScaling.h"
 #include "foundation/PxTransform.h"

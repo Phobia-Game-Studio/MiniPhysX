@@ -31,7 +31,7 @@
 #include "foundation/PxMemory.h"
 #include "GuBV4Build.h"
 #include "GuBV4.h"
-#include "PxTriangle.h"
+#include "geometry/PxTriangle.h"
 #include "CmPhysXCommon.h"
 #include "PsBasicTemplates.h"
 #include "GuCenterExtents.h"

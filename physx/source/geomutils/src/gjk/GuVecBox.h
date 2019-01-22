@@ -34,11 +34,11 @@
 @{
 */
 #include "foundation/PxTransform.h"
-#include "PxPhysXCommonConfig.h"
+#include "common/PxPhysXCommonConfig.h"
 #include "GuVecConvex.h"
 #include "PsVecTransform.h"
 #include "GuConvexSupportTable.h"
-#include "PxBoxGeometry.h"
+#include "geometry/PxBoxGeometry.h"
 
 namespace physx
 {

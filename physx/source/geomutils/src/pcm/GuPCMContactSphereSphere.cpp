@@ -29,7 +29,7 @@
 
 #include "GuGeometryUnion.h"
 
-#include "GuContactBuffer.h"
+#include "geomutils/GuContactBuffer.h"
 #include "GuContactMethodImpl.h"
 #include "PsVecTransform.h"
 

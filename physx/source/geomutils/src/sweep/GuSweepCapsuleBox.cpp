@@ -32,7 +32,7 @@
 #include "GuSweepCapsuleBox.h"
 #include "GuSweepSphereTriangle.h"
 #include "GuCapsule.h"
-#include "PxTriangle.h"
+#include "geometry/PxTriangle.h"
 #include "GuDistanceSegmentBox.h"
 #include "GuInternal.h"
 #include "PsAlloca.h"

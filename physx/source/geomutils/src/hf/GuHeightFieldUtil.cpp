@@ -34,7 +34,7 @@
 #include "PsFoundation.h"
 #include "GuHeightField.h"
 #include "GuEntityReport.h"
-#include "PxMeshScale.h"
+#include "geometry/PxMeshScale.h"
 
 using namespace physx;
 

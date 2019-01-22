@@ -33,7 +33,7 @@
 
 #include "foundation/PxMat33.h"
 #include "PxConstraint.h"
-#include "PxJoint.h"
+#include "extensions/PxJoint.h"
 #include "ExtJoint.h"
 
 using namespace physx;

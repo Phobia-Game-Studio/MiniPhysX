@@ -34,8 +34,8 @@
 #include "GuGeometryUnion.h"
 
 #include "GuContactMethodImpl.h"
-#include "PxTriangleMesh.h"
-#include "GuContactBuffer.h"
+#include "geometry/PxTriangleMesh.h"
+#include "geomutils/GuContactBuffer.h"
 #include "GuHeightField.h"
 #include "GuPCMContactConvexCommon.h"
 #include "GuPCMContactMeshCallback.h"

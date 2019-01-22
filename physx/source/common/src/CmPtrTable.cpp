@@ -31,7 +31,7 @@
 #include "foundation/PxMemory.h"
 #include "CmPtrTable.h"
 #include "CmUtils.h"
-#include "PxMetaData.h"
+#include "common/PxMetaData.h"
 #include "PsBitUtils.h"
 
 using namespace physx;

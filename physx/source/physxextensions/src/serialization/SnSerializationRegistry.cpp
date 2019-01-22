@@ -31,7 +31,7 @@
 #include "PxPhysics.h"
 #include "PxPhysicsSerialization.h"
 #include "ExtSerialization.h"
-#include "PxSerializer.h"
+#include "common/PxSerializer.h"
 #include "CmCollection.h"
 #include "PxArticulationLink.h"
 #include "PsFoundation.h"

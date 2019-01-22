@@ -33,7 +33,7 @@
 #include "PsMathUtils.h"
 #include "PsVecMath.h"
 
-#include "PxCooking.h"
+#include "cooking/PxCooking.h"
 
 #include "GuConvexMeshData.h"
 #include "GuBigConvexData2.h"

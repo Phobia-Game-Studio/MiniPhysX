@@ -31,7 +31,7 @@
 #define PX_PSCOOKING_H
 
 #include "foundation/PxMemory.h"
-#include "PxCooking.h"
+#include "cooking/PxCooking.h"
 #include "PsUserAllocated.h"
 
 namespace physx

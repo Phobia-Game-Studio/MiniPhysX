@@ -33,7 +33,7 @@
 #include "foundation/PxBounds3.h"
 #include "PsArray.h"
 #include "CmPhysXCommon.h"
-#include "PxPhysXCommonConfig.h"
+#include "common/PxPhysXCommonConfig.h"
 #include "GuAxes.h"
 
 namespace physx

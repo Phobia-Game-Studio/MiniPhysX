@@ -36,7 +36,7 @@
 #include "foundation/PxMat33.h"
 #include "foundation/PxBounds3.h"
 #include "CmPhysXCommon.h"
-#include "PxBase.h"
+#include "common/PxBase.h"
 #include "PsInlineArray.h"
 #include "PsArray.h"
 #include "PsAllocator.h"

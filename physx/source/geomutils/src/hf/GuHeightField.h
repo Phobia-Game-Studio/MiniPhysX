@@ -34,10 +34,10 @@
 #include "CmRefCountable.h"
 #include "PsMathUtils.h"
 #include "GuSphere.h"
-#include "PxHeightFieldSample.h"
-#include "PxHeightFieldDesc.h"
+#include "geometry/PxHeightFieldSample.h"
+#include "geometry/PxHeightFieldDesc.h"
 #include "GuHeightFieldData.h"
-#include "PxHeightField.h"
+#include "geometry/PxHeightField.h"
 
 //#define PX_HEIGHTFIELD_VERSION 0
 #define PX_HEIGHTFIELD_VERSION 1  // tiled version that was needed for PS3 only has been removed

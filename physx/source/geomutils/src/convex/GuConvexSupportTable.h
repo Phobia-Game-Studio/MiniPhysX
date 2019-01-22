@@ -32,7 +32,7 @@
 
 #include "GuVecConvex.h"
 #include "PsVecTransform.h"
-#include "PxPhysXCommonConfig.h"
+#include "common/PxPhysXCommonConfig.h"
 
 namespace physx
 {

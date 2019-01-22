@@ -31,8 +31,8 @@
 #define NP_PRISMATICJOINTCONSTRAINT_H
 
 #include "ExtJoint.h"
-#include "PxPrismaticJoint.h"
-#include "PxTolerancesScale.h"
+#include "extensions/PxPrismaticJoint.h"
+#include "common/PxTolerancesScale.h"
 #include "CmUtils.h"
 
 namespace physx

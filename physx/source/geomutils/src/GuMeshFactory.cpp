@@ -29,7 +29,7 @@
 
 #include "PsIntrinsics.h"
 #include "GuMeshFactory.h"
-#include "PxHeightFieldDesc.h"
+#include "geometry/PxHeightFieldDesc.h"
 #include "GuTriangleMesh.h"
 #include "GuTriangleMeshBV4.h"
 #include "GuTriangleMeshRTree.h"

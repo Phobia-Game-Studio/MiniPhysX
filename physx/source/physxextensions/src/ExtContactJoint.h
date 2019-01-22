@@ -33,8 +33,8 @@
 
 #include "PsUserAllocated.h"
 #include "ExtJoint.h"
-#include "PxContactJoint.h"
-#include "PxTolerancesScale.h"
+#include "extensions/PxContactJoint.h"
+#include "common/PxTolerancesScale.h"
 #include "CmUtils.h"
 
 namespace physx

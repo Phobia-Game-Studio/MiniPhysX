@@ -27,7 +27,7 @@
 // Copyright (c) 2004-2008 AGEIA Technologies, Inc. All rights reserved.
 // Copyright (c) 2001-2004 NovodeX AG. All rights reserved.  
 
-#include "PxVehicleWheels.h"
+#include "vehicle/PxVehicleWheels.h"
 #include "PxVehicleSuspWheelTire4.h"
 #include "PxVehicleSuspLimitConstraintShader.h"
 #include "PxVehicleDefaults.h"

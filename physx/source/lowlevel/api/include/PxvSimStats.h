@@ -34,7 +34,7 @@
 #include "foundation/PxAssert.h"
 #include "foundation/PxMemory.h"
 #include "CmPhysXCommon.h"
-#include "PxGeometry.h"
+#include "geometry/PxGeometry.h"
 
 namespace physx
 {

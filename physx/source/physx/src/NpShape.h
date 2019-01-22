@@ -33,7 +33,7 @@
 
 #include "PxShape.h"
 #include "buffering/ScbShape.h"
-#include "PxMetaData.h"
+#include "common/PxMetaData.h"
 
 namespace physx
 {

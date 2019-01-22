@@ -28,15 +28,15 @@
 // Copyright (c) 2001-2004 NovodeX AG. All rights reserved.  
 
 #include "PxPhysicsAPI.h"
-#include "PxConstraintExt.h"
+#include "extensions/PxConstraintExt.h"
 #include "PxPhysicsVersion.h"
 #include "PsFoundation.h"
-#include "PxMetaData.h"
+#include "common/PxMetaData.h"
 #include "SnConvX.h"
 #include "SnSerializationRegistry.h"
 #include "SnSerialUtils.h"
 #include "ExtSerialization.h"
-#include "PxSerializer.h"
+#include "common/PxSerializer.h"
 #include "CmCollection.h"
 
 using namespace physx;

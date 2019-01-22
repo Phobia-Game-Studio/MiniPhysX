@@ -30,7 +30,7 @@
 #include "serialization/SnSerialUtils.h"
 #include "PsAlloca.h"
 #include "CmUtils.h"
-#include "PxDefaultStreams.h"
+#include "extensions/PxDefaultStreams.h"
 #include <assert.h>
 
 using namespace physx;

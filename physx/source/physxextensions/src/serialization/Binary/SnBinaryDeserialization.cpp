@@ -37,7 +37,7 @@
 #include "PxPhysics.h"
 #include "PxPhysicsSerialization.h"
 #include "SnSerializationContext.h"
-#include "PxSerializer.h"
+#include "common/PxSerializer.h"
 #include "serialization/SnSerializationRegistry.h"
 #include "serialization/SnSerialUtils.h"
 #include "CmCollection.h"

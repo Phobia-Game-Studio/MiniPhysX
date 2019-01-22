@@ -41,7 +41,7 @@
 #include "CmPhysXCommon.h"
 #include "PsBitUtils.h"
 // PX_SERIALIZATION
-#include "PxSerialFramework.h"
+#include "common/PxSerialFramework.h"
 //~PX_SERIALIZATION
 
 namespace physx

@@ -32,7 +32,7 @@
 #define PX_PHYSICS_CM_COLLECTION
 
 #include "CmPhysXCommon.h"
-#include "PxCollection.h"
+#include "common/PxCollection.h"
 #include "PsHashMap.h"
 #include "PsUserAllocated.h"
 #include "PsAllocator.h"

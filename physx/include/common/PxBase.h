@@ -35,8 +35,8 @@
 @{
 */
 
-#include "PxSerialFramework.h"
-#include "PxCollection.h"
+#include "common/PxSerialFramework.h"
+#include "common/PxCollection.h"
 #include "common/PxTypeInfo.h"
 #include "foundation/PxFlags.h"
 #include <string.h>	// For strcmp

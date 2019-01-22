@@ -27,8 +27,8 @@
 // Copyright (c) 2004-2008 AGEIA Technologies, Inc. All rights reserved.
 // Copyright (c) 2001-2004 NovodeX AG. All rights reserved.  
 
-#include "PxVehicleDrive.h"
-#include "PxVehicleSDK.h"
+#include "vehicle/PxVehicleDrive.h"
+#include "vehicle/PxVehicleSDK.h"
 #include "PxVehicleDefaults.h"
 #include "PxRigidDynamic.h"
 #include "PsFoundation.h"

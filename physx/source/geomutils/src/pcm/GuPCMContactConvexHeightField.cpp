@@ -35,8 +35,8 @@
 
 #include "GuContactMethodImpl.h"
 #include "GuPCMShapeConvex.h"
-#include "PxTriangleMesh.h"
-#include "GuContactBuffer.h"
+#include "geometry/PxTriangleMesh.h"
+#include "geomutils/GuContactBuffer.h"
 #include "GuHeightField.h"
 #include "GuHeightFieldUtil.h"
 #include "GuPCMContactConvexCommon.h"

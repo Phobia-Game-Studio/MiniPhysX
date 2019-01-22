@@ -34,7 +34,7 @@
 #include "foundation/PxFlags.h"
 #include "GuSIMDHelpers.h"
 #include <stddef.h>
-#include "PxGeometry.h"
+#include "geometry/PxGeometry.h"
 #include "GuBox.h"
 #include "GuCenterExtents.h"
 #include "GuSphere.h"

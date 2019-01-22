@@ -36,9 +36,9 @@
 #include "CmRenderOutput.h"
 #include "PxcNpCacheStreamPair.h"
 #include "PxcConstraintBlockStream.h"
-#include "GuContactBuffer.h"
+#include "geomutils/GuContactBuffer.h"
 #include "PxcThreadCoherentCache.h"
-#include "PxGeometry.h"
+#include "geometry/PxGeometry.h"
 #include "CmBitMap.h"
 #include "../pcm/GuPersistentContactManifold.h"
 

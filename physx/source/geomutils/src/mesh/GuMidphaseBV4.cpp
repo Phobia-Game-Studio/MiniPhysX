@@ -45,7 +45,7 @@ using namespace physx::shdfnd::aos;
 #include "GuIntersectionTriangleBox.h"
 #include "GuIntersectionCapsuleTriangle.h"
 #include "GuIntersectionRayBox.h"
-#include "PxTriangleMeshGeometry.h"
+#include "geometry/PxTriangleMeshGeometry.h"
 #include "CmScaling.h"
 #include "GuTriangleMeshBV4.h"
 

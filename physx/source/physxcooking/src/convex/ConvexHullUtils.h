@@ -40,7 +40,7 @@
 #include "PsArray.h"
 #include "PsMathUtils.h"
 
-#include "PxConvexMeshDesc.h"
+#include "cooking/PxConvexMeshDesc.h"
 
 namespace physx
 {

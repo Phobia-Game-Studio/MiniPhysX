@@ -28,7 +28,7 @@
 // Copyright (c) 2001-2004 NovodeX AG. All rights reserved.  
 
 #include "GuIntersectionRayBox.h"
-#include "PxGeometryQuery.h"
+#include "geometry/PxGeometryQuery.h"
 #include "NpRigidDynamic.h"
 #include "NpQueryShared.h"
 #include "SqPruner.h"

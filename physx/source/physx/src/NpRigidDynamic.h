@@ -34,7 +34,7 @@
 #include "NpRigidBodyTemplate.h"
 #include "PxRigidDynamic.h"
 #include "ScbBody.h"
-#include "PxMetaData.h"
+#include "common/PxMetaData.h"
 
 namespace physx
 {

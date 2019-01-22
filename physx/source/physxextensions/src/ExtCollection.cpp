@@ -27,21 +27,21 @@
 // Copyright (c) 2004-2008 AGEIA Technologies, Inc. All rights reserved.
 // Copyright (c) 2001-2004 NovodeX AG. All rights reserved.  
 
-#include "PxBase.h"
+#include "common/PxBase.h"
 #include "PsArray.h"
 #include "PxShape.h"
-#include "PxConvexMesh.h"
-#include "PxTriangleMesh.h"
-#include "PxHeightField.h"
+#include "geometry/PxConvexMesh.h"
+#include "geometry/PxTriangleMesh.h"
+#include "geometry/PxHeightField.h"
 #include "PxMaterial.h"
-#include "PxJoint.h"
-#include "PxConstraintExt.h"
+#include "extensions/PxJoint.h"
+#include "extensions/PxConstraintExt.h"
 #include "PxArticulation.h"
 #include "PxAggregate.h"
 #include "PxPhysics.h"
 #include "PxScene.h"
 #include "PxPruningStructure.h"
-#include "PxCollectionExt.h"
+#include "extensions/PxCollectionExt.h"
 
 
 using namespace physx;

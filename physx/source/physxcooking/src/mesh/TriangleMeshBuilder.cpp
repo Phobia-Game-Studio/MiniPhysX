@@ -32,7 +32,7 @@
 #include "EdgeList.h"
 #include "MeshCleaner.h"
 #include "GuConvexEdgeFlags.h"
-#include "PxTriangleMeshDesc.h"
+#include "cooking/PxTriangleMeshDesc.h"
 #include "GuSerialize.h"
 #include "Cooking.h"
 #include "GuMeshData.h"

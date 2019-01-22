@@ -28,20 +28,20 @@
 // Copyright (c) 2001-2004 NovodeX AG. All rights reserved.  
 
 #include "foundation/PxIO.h"
-#include "PxExtensionsAPI.h"
+#include "extensions/PxExtensionsAPI.h"
 #include "PsFoundation.h"
-#include "PxMetaData.h"
+#include "common/PxMetaData.h"
 #include "ExtDistanceJoint.h"
 #include "ExtD6Joint.h"
 #include "ExtFixedJoint.h"
 #include "ExtPrismaticJoint.h"
 #include "ExtRevoluteJoint.h"
 #include "ExtSphericalJoint.h"
-#include "PxRepXSerializer.h"
+#include "extensions/PxRepXSerializer.h"
 #include "SnRepXCoreSerializer.h"
 #include "SnJointRepXSerializer.h"
 #include "PxExtensionMetaDataObjects.h"
-#include "PxSerializer.h"
+#include "common/PxSerializer.h"
 #include "ExtSerialization.h"
 
 #if PX_SUPPORT_PVD

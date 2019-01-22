@@ -29,8 +29,8 @@
 
 #include "GuMidphaseInterface.h"
 #include "GuInternal.h"
-#include "PxSphereGeometry.h"
-#include "PxConvexMeshGeometry.h"
+#include "geometry/PxSphereGeometry.h"
+#include "geometry/PxConvexMeshGeometry.h"
 #include "GuIntersectionRayCapsule.h"
 #include "GuIntersectionRaySphere.h"
 #include "GuIntersectionRayPlane.h"

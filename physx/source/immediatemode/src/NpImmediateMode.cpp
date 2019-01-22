@@ -37,7 +37,7 @@
 #include "../../lowleveldynamics/src/DyConstraintPrep.h"
 #include "../../lowleveldynamics/src/DySolverControl.h"
 #include "../../lowleveldynamics/src/DySolverContext.h"
-#include "PxGeometry.h"
+#include "geometry/PxGeometry.h"
 #include "GuGeometryUnion.h"
 #include "GuContactMethodImpl.h"
 #include "../../lowlevel/common/include/collision/PxcContactMethodImpl.h"

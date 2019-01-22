@@ -28,12 +28,12 @@
 // Copyright (c) 2001-2004 NovodeX AG. All rights reserved.  
 
 
-#include "PxTriangleMeshExt.h"
-#include "PxMeshQuery.h"
-#include "PxGeometryQuery.h"
-#include "PxTriangleMeshGeometry.h"
-#include "PxHeightFieldGeometry.h"
-#include "PxTriangleMesh.h"
+#include "extensions/PxTriangleMeshExt.h"
+#include "geometry/PxMeshQuery.h"
+#include "geometry/PxGeometryQuery.h"
+#include "geometry/PxTriangleMeshGeometry.h"
+#include "geometry/PxHeightFieldGeometry.h"
+#include "geometry/PxTriangleMesh.h"
 #include "PsAllocator.h"
 
 using namespace physx;

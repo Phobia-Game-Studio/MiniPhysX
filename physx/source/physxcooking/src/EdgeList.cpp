@@ -30,7 +30,7 @@
 
 #include "foundation/PxMemory.h"
 #include "EdgeList.h"
-#include "PxTriangle.h"
+#include "geometry/PxTriangle.h"
 #include "PsMathUtils.h"
 #include "CmRadixSortBuffered.h"
 #include "GuSerialize.h"

@@ -34,7 +34,7 @@
 #include "CmRenderOutput.h"
 #include "PxVisualizationParameter.h"
 #include "GuBox.h"
-#include "PxMeshScale.h"
+#include "geometry/PxMeshScale.h"
 #include "CmUtils.h"
 
 using namespace physx;

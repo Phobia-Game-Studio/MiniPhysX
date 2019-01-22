@@ -31,7 +31,7 @@
 #include "ScPhysics.h"
 #include "ScScene.h"
 #include "PxvGlobals.h"
-#include "PxTolerancesScale.h"
+#include "common/PxTolerancesScale.h"
 
 using namespace physx;
 

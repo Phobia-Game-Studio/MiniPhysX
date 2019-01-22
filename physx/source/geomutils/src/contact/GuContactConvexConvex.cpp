@@ -34,7 +34,7 @@
 #include "GuInternal.h"
 #include "GuSeparatingAxes.h"
 #include "GuContactMethodImpl.h"
-#include "GuContactBuffer.h"
+#include "geomutils/GuContactBuffer.h"
 #include "PsFPU.h"
 
 // csigg: the single reference of gEnableOptims (below) has been

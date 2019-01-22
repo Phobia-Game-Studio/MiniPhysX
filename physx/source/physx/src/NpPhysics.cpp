@@ -47,7 +47,7 @@
 #include "GuConvexMesh.h"
 #include "GuTriangleMesh.h"
 #include "PsIntrinsics.h"
-#include "PxTolerancesScale.h"
+#include "common/PxTolerancesScale.h"
 #include "PxvGlobals.h"		// dynamic registration of HFs & articulations in LL
 #include "GuOverlapTests.h" // dynamic registration of HFs in Gu
 #include "PxDeletionListener.h"

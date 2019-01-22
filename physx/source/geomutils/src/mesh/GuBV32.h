@@ -31,7 +31,7 @@
 #define GU_BV32_H
 
 #include "foundation/PxBounds3.h"
-#include "PxSerialFramework.h"
+#include "common/PxSerialFramework.h"
 #include "PsUserAllocated.h"
 #include "GuBV4.h"
 #include "CmPhysXCommon.h"

@@ -39,7 +39,7 @@
 #include "DyThresholdTable.h"
 #include "PsAllocator.h"
 #include "PsAllocator.h"
-#include "GuContactBuffer.h"
+#include "geomutils/GuContactBuffer.h"
 #include "DySolverConstraintDesc.h"
 #include "PxvDynamics.h"
 #include "DyArticulation.h"

@@ -42,7 +42,7 @@
 #include "GuInternal.h"
 
 #include "GuContactMethodImpl.h"
-#include "GuContactBuffer.h"
+#include "geomutils/GuContactBuffer.h"
 #include "GuBoxConversion.h"
 #include "GuGeometryUnion.h"
 #include "GuShapeConvex.h"
@@ -54,8 +54,8 @@
 #include "PsUtilities.h"
 #include "PsVecTransform.h"
 #include "PsMathUtils.h"
-#include "PxMeshScale.h"
-#include "PxConvexMeshGeometry.h"
+#include "geometry/PxMeshScale.h"
+#include "geometry/PxConvexMeshGeometry.h"
 
 using namespace physx;
 using namespace Gu;

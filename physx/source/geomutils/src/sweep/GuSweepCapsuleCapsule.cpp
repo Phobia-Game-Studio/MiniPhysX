@@ -33,7 +33,7 @@
 #include "GuDistanceSegmentSegment.h"
 #include "GuIntersectionRayCapsule.h"
 #include "PxQueryReport.h"
-#include "PxTriangle.h"
+#include "geometry/PxTriangle.h"
 
 using namespace physx;
 using namespace Gu;

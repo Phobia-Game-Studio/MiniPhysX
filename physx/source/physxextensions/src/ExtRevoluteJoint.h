@@ -31,7 +31,7 @@
 #define NP_REVOLUTEJOINTCONSTRAINT_H
 
 #include "ExtJoint.h"
-#include "PxRevoluteJoint.h"
+#include "extensions/PxRevoluteJoint.h"
 #include "PsIntrinsics.h"
 #include "CmUtils.h"
 

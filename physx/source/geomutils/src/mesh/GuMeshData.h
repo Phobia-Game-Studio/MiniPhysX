@@ -36,7 +36,7 @@
 #include "PsUserAllocated.h"
 #include "CmPhysXCommon.h"
 #include "PsAllocator.h"
-#include "PxTriangleMesh.h"
+#include "geometry/PxTriangleMesh.h"
 #include "GuRTree.h"
 #include "GuBV4.h"
 #include "GuBV32.h"

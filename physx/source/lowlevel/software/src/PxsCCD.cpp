@@ -32,7 +32,7 @@
 #include "PxsContext.h"
 #include "PxsRigidBody.h"
 #include "PxcContactMethodImpl.h"
-#include "GuContactPoint.h"
+#include "geomutils/GuContactPoint.h"
 #include "PxsCCD.h"
 #include "PsSort.h"
 #include "PsAtomic.h"

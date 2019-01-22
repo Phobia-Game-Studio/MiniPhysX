@@ -34,7 +34,7 @@
 #include "PsUserAllocated.h"
 #include "PsSync.h"
 #include "PsSList.h"
-#include "PxDefaultCpuDispatcher.h"
+#include "extensions/PxDefaultCpuDispatcher.h"
 #include "ExtSharedQueueEntryPool.h"
 #include "task/PxTask.h"
 #include "common/PxProfileZone.h"

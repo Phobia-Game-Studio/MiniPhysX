@@ -31,10 +31,10 @@
 #define GU_MESH_FACTORY_H
 
 #include "foundation/PxIO.h"
-#include "PxTriangleMesh.h"
-#include "PxConvexMesh.h"
-#include "PxHeightField.h"
-#include "PxBVHStructure.h"
+#include "geometry/PxTriangleMesh.h"
+#include "geometry/PxConvexMesh.h"
+#include "geometry/PxHeightField.h"
+#include "geometry/PxBVHStructure.h"
 
 #include "CmPhysXCommon.h"
 #include "PxPhysXConfig.h"

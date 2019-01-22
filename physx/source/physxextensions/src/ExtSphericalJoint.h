@@ -31,7 +31,7 @@
 #define NP_SPHERICALJOINTCONSTRAINT_H
 
 #include "ExtJoint.h"
-#include "PxSphericalJoint.h"
+#include "extensions/PxSphericalJoint.h"
 #include "CmUtils.h"
 
 namespace physx

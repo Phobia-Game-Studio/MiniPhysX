@@ -32,7 +32,7 @@
 #define PX_COLLISION_CONVEXMESHBUILDER
 
 #include "GuConvexMeshData.h"
-#include "PxCooking.h"
+#include "cooking/PxCooking.h"
 #include "ConvexPolygonsBuilder.h"
 
 namespace physx

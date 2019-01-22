@@ -35,7 +35,7 @@
 
 #include "CmPhysXCommon.h"
 #include "PsUserAllocated.h"
-#include "PxJoint.h"
+#include "extensions/PxJoint.h"
 #include "PxPvdDataStream.h"
 #include "PxExtensionMetaDataObjects.h"
 #include "PvdTypeNames.h"

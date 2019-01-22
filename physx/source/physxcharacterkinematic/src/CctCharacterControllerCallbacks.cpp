@@ -30,15 +30,15 @@
 #include "common/PxProfileZone.h"
 #include "CctInternalStructs.h"
 #include "PxScene.h"
-#include "PxSphereGeometry.h"
-#include "PxCapsuleGeometry.h"
-#include "PxBoxGeometry.h"
-#include "PxConvexMesh.h"
-#include "PxMeshQuery.h"
+#include "geometry/PxSphereGeometry.h"
+#include "geometry/PxCapsuleGeometry.h"
+#include "geometry/PxBoxGeometry.h"
+#include "geometry/PxConvexMesh.h"
+#include "geometry/PxMeshQuery.h"
 #include "extensions/PxTriangleMeshExt.h"
-#include "PxTriangleMeshGeometry.h"
-#include "PxConvexMeshGeometry.h"
-#include "PxHeightFieldGeometry.h"
+#include "geometry/PxTriangleMeshGeometry.h"
+#include "geometry/PxConvexMeshGeometry.h"
+#include "geometry/PxHeightFieldGeometry.h"
 #include "CmRenderOutput.h"
 #include "GuIntersectionTriangleBox.h"
 #include "PsMathUtils.h"
@@ -999,7 +999,7 @@ void Cct::findTouchedGeometry(
 
 #include "CctCharacterControllerManager.h"
 #include "CctObstacleContext.h"
-#include "PxControllerBehavior.h"
+#include "characterkinematic/PxControllerBehavior.h"
 
 // #### hmmm, in the down case, isn't reported length too big ? It contains our artificial up component,
 // that might confuse the user

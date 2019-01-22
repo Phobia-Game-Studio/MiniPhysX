@@ -36,7 +36,7 @@
 #include "PsFoundation.h"
 #include "PsUtilities.h"
 #include "NpScene.h"
-#include "PxGeometryQuery.h"
+#include "geometry/PxGeometryQuery.h"
 #include "common/PxProfileZone.h"
 
 using namespace physx;

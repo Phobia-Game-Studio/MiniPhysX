@@ -32,7 +32,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include "PsString.h"
-#include "PxCoreUtilityTypes.h"
+#include "common/PxCoreUtilityTypes.h"
 #include "PxFiltering.h"
 
 //Remapping function name for gcc-based systems.

@@ -34,7 +34,7 @@
 #include "EdgeList.h"
 #include "GuTriangle32.h"
 #include "GuConvexMesh.h"
-#include "PxCooking.h"
+#include "cooking/PxCooking.h"
 #include "CookingUtils.h"
 #include "ConvexHullBuilder.h"
 #include "ConvexHullLib.h"

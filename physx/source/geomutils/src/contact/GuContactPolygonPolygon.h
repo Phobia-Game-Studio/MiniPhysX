@@ -32,7 +32,7 @@
 
 #include "foundation/PxVec3.h"
 #include "CmPhysXCommon.h"
-#include "PxPhysXCommonConfig.h"
+#include "common/PxPhysXCommonConfig.h"
 
 namespace physx
 {

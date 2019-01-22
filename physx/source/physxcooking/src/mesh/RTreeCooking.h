@@ -29,7 +29,7 @@
 
 #include "CmPhysXCommon.h"
 #include "GuMeshData.h"
-#include "PxCooking.h"
+#include "cooking/PxCooking.h"
 #include "PsArray.h"
 #include "GuRTree.h"
 

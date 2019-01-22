@@ -378,8 +378,8 @@ void NpShapeManager::teardownSceneQuery(SceneQueryManager& sqManager, PxU32 inde
 
 #if PX_ENABLE_DEBUG_VISUALIZATION
 #include "GuHeightFieldUtil.h"
-#include "PxGeometryQuery.h"
-#include "PxMeshQuery.h"
+#include "geometry/PxGeometryQuery.h"
+#include "geometry/PxMeshQuery.h"
 #include "GuConvexEdgeFlags.h"
 #include "GuMidphaseInterface.h"
 

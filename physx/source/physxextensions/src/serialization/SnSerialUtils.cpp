@@ -29,7 +29,7 @@
 
 #include "SnSerialUtils.h"
 #include "PsString.h"
-#include "PxSerialization.h"
+#include "extensions/PxSerialization.h"
 #include "PxPhysicsVersion.h"
 #include "PsBasicTemplates.h"
 

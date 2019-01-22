@@ -40,7 +40,7 @@
 #include "CmPhysXCommon.h"
 #include "GuMeshFactory.h"
 #include "PsVecMath.h"
-#include "PxBVHStructure.h"
+#include "geometry/PxBVHStructure.h"
 
 namespace physx
 {

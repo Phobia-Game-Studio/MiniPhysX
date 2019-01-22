@@ -30,9 +30,9 @@
 #ifndef GU_HEIGHTFIELD_UTIL_H
 #define GU_HEIGHTFIELD_UTIL_H
 
-#include "PxHeightFieldGeometry.h"
+#include "geometry/PxHeightFieldGeometry.h"
 #include "GuHeightField.h"
-#include "PxTriangle.h"
+#include "geometry/PxTriangle.h"
 #include "../intersection/GuIntersectionRayTriangle.h"
 #include "../intersection/GuIntersectionRayBox.h"
 #include "PsBasicTemplates.h"

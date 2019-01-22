@@ -36,10 +36,10 @@
 #include "CmPhysXCommon.h"
 #include "PsHash.h"
 #include "PsUserAllocated.h"
-#include "PxSerialFramework.h"
+#include "common/PxSerialFramework.h"
 #include "CmCollection.h"
 #include "CmUtils.h"
-#include "PxDefaultStreams.h"
+#include "extensions/PxDefaultStreams.h"
 #include "PsFoundation.h"
 #include "SnConvX_Align.h"
 

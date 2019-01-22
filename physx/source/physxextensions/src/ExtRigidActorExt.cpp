@@ -28,12 +28,12 @@
 // Copyright (c) 2001-2004 NovodeX AG. All rights reserved.  
 
 
-#include "PxRigidActorExt.h"
+#include "extensions/PxRigidActorExt.h"
 #include "PsAllocator.h"
 #include "PsInlineArray.h"
 #include "CmPhysXCommon.h"
 #include "PxShape.h"
-#include "PxGeometryQuery.h"
+#include "geometry/PxGeometryQuery.h"
 
 using namespace physx;
 

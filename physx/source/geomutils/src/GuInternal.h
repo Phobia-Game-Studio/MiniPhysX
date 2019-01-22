@@ -32,8 +32,8 @@
 
 #include "CmPhysXCommon.h"
 #include "GuCapsule.h"
-#include "PxCapsuleGeometry.h"
-#include "PxBoxGeometry.h"
+#include "geometry/PxCapsuleGeometry.h"
+#include "geometry/PxBoxGeometry.h"
 #include "PsMathUtils.h"
 #include "PsUtilities.h"
 

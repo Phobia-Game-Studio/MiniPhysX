@@ -38,7 +38,7 @@
 #include "GuGeometryUnion.h"
 #include "PsIntrinsics.h"
 #include "CmPhysXCommon.h"
-#include "PxMetaData.h"
+#include "common/PxMetaData.h"
 
 using namespace physx;
 using namespace Ps;

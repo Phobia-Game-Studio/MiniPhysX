@@ -34,7 +34,7 @@
 
 #include <errno.h>
 #include "PsFoundation.h"
-#include "PxDefaultStreams.h"
+#include "extensions/PxDefaultStreams.h"
 #include "SnFile.h"
 #include "CmPhysXCommon.h"
 #include "PsUtilities.h"

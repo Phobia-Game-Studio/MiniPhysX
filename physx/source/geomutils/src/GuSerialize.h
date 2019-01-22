@@ -33,7 +33,7 @@
 #include "foundation/PxSimpleTypes.h"
 #include "foundation/PxIO.h"
 #include "CmPhysXCommon.h"
-#include "PxPhysXCommonConfig.h"
+#include "common/PxPhysXCommonConfig.h"
 #include "PsUtilities.h"
 
 namespace physx
