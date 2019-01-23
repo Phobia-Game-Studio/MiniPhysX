@@ -23,34 +23,51 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
-// Copyright (c) 2008-2018 NVIDIA Corporation. All rights reserved.
+// Copyright (c) 2008-2019 NVIDIA Corporation. All rights reserved.
 // Copyright (c) 2004-2008 AGEIA Technologies, Inc. All rights reserved.
-// Copyright (c) 2001-2004 NovodeX AG. All rights reserved.  
+// Copyright (c) 2001-2004 NovodeX AG. All rights reserved.
 
+#ifndef PXFOUNDATION_PXMATHUTILS_H
+#define PXFOUNDATION_PXMATHUTILS_H
 
-#ifndef PX_CHARACTER_H
-#define PX_CHARACTER_H
-/** \addtogroup character
+/** \addtogroup common
   @{
 */
 
 #include "foundation/Px.h"
+#include "foundation/PxFoundationConfig.h"
 
-// define API function declaration
-#if defined PX_PHYSX_STATIC_LIB || defined PX_PHYSX_CHARACTER_STATIC_LIB
-	#define PX_PHYSX_CHARACTER_API
-#else
-	#if PX_WINDOWS
-		#if defined PX_PHYSX_CHARACTER_EXPORTS
-			#define PX_PHYSX_CHARACTER_API __declspec(dllexport)
-		#else
-			#define PX_PHYSX_CHARACTER_API __declspec(dllimport)
-		#endif
-	#elif PX_UNIX_FAMILY
-		#define PX_PHYSX_CHARACTER_API PX_UNIX_EXPORT
-    #else
-		#define PX_PHYSX_CHARACTER_API
-    #endif
+#if !PX_DOXYGEN
+namespace physx
+{
+#endif
+
+/**
+\brief finds the shortest rotation between two vectors.
+
+\param[in] from the vector to start from
+\param[in] target the vector to rotate to
+\return a rotation about an axis normal to the two vectors which takes one to the other via the shortest path
+*/
+
+PX_FOUNDATION_API PxQuat PxShortestRotation(const PxVec3& from, const PxVec3& target);
+
+/* \brief diagonalizes a 3x3 symmetric matrix y
+
+The returned matrix satisfies M = R * D * R', where R is the rotation matrix for the output quaternion, R' its
+transpose, and D the diagonal matrix
+
+If the matrix is not symmetric, the result is undefined.
+
+\param[in] m the matrix to diagonalize
+\param[out] axes a quaternion rotation which diagonalizes the matrix
+\return the vector diagonal of the diagonalized matrix.
+*/
+
+PX_FOUNDATION_API PxVec3 PxDiagonalize(const PxMat33& m, PxQuat& axes);
+
+#if !PX_DOXYGEN
+} // namespace physx
 #endif
 
 /** @} */
