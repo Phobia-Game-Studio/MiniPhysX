@@ -32,10 +32,6 @@
 
 #include "foundation/Px.h"
 
-#ifndef PX_COOKING
-#error Do not include anymore!
-#endif
-
 namespace physx
 {
 	class MeshCleaner

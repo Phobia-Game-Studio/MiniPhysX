@@ -33,10 +33,6 @@
 #include "PsAllocator.h"
 #include "PsBitUtils.h"
 
-#ifndef PX_COOKING
-#error Do not include anymore!
-#endif
-
 using namespace physx;
 
 struct Indices
