@@ -3,6 +3,9 @@ cmake_minimum_required (VERSION 3.15 FATAL_ERROR)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_COMPILE_FEATURES cxx_std_14)
 
+set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g -D_DEBUG -DPX_DEBUG -DPX_CHECKED")
+set(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG")
+
 add_library(PhysX STATIC)
 include(_source_files.cmake)
 
