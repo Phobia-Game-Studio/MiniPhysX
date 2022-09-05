@@ -308,7 +308,7 @@ PX_FORCE_INLINE PxI32 rand(const PxI32 a, const PxI32 b)
 */
 PX_FORCE_INLINE PxF32 rand(const PxF32 a, const PxF32 b)
 {
-	return a + (b - a) * ::rand() / RAND_MAX;
+	return a + (b - a) * ::rand() / static_cast<float>(RAND_MAX);
 }
 
 //! \brief return angle between two vectors in radians
