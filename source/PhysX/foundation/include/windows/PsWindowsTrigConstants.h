@@ -39,10 +39,17 @@ namespace aos
 
 #define PX_GLOBALCONST extern const __declspec(selectany)
 
-__declspec(align(16)) struct PX_VECTORF32
-{
-	float f[4];
-};
+#if PX_MINGW_CLANG
+    struct PX_VECTORF32
+    {
+        float f[4];
+    } __declspec(__aligned__(16));
+#else
+    __declspec(align(16)) struct PX_VECTORF32
+    {
+        float f[4];
+    };
+#endif
 
 //#define PX_PI               3.141592654f
 //#define PX_2PI              6.283185307f

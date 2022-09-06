@@ -30,10 +30,14 @@
 #include "PhysXIndicator.h"
 #include "nvPhysXtoDrv.h"
 
+#if !PX_MINGW_CLANG
 #pragma warning (push)
 #pragma warning (disable : 4668) //'symbol' is not defined as a preprocessor macro, replacing with '0' for 'directives'
 #include <windows.h>
 #pragma warning (pop)
+#else
+#include <windows.h>
+#endif
 
 #include <stdio.h>
 

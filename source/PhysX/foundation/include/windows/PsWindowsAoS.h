@@ -43,6 +43,18 @@ namespace shdfnd
 namespace aos
 {
 
+#if PX_MINGW_CLANG
+    union __declspec(__aligned__(16)) PxM128 {
+        float m128_f32[4] = {};
+        uint16_t m128_u16[8];
+        uint32_t m128_u32[4];
+        __m128 m128;
+
+        PxM128() = default;
+        explicit inline PxM128(const __m128& m) : m128(m) { }
+    };
+#endif
+
 typedef __m128 FloatV;
 typedef __m128 Vec3V;
 typedef __m128 Vec4V;

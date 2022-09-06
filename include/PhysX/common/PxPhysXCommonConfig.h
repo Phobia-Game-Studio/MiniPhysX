@@ -47,13 +47,13 @@ https://developercommunity.visualstudio.com/content/problem/66047/possible-compi
 #if defined PX_PHYSX_STATIC_LIB
 	#define PX_PHYSX_CORE_API
 #else
-	#if PX_WINDOWS
+	#if PX_WINDOWS && !PX_MINGW_CLANG
 		#if defined PX_PHYSX_CORE_EXPORTS
 			#define PX_PHYSX_CORE_API __declspec(dllexport)
 		#else
 			#define PX_PHYSX_CORE_API __declspec(dllimport)
 		#endif
-	#elif PX_UNIX_FAMILY
+	#elif PX_UNIX_FAMILY || PX_MINGW_CLANG
 		#define PX_PHYSX_CORE_API PX_UNIX_EXPORT
     #else
 		#define PX_PHYSX_CORE_API
@@ -85,13 +85,13 @@ https://developercommunity.visualstudio.com/content/problem/66047/possible-compi
 #if defined PX_PHYSX_STATIC_LIB
 	#define PX_PHYSX_COMMON_API
 #else
-	#if PX_WINDOWS && !defined(__CUDACC__)
+	#if PX_WINDOWS && !defined(__CUDACC__) && !PX_MINGW_CLANG
 		#if defined PX_PHYSX_COMMON_EXPORTS
 			#define PX_PHYSX_COMMON_API __declspec(dllexport)
 		#else
 			#define PX_PHYSX_COMMON_API __declspec(dllimport)
 		#endif
-	#elif PX_UNIX_FAMILY
+	#elif PX_UNIX_FAMILY || PX_MINGW_CLANG
 		#define PX_PHYSX_COMMON_API PX_UNIX_EXPORT
 	#else
 		#define PX_PHYSX_COMMON_API

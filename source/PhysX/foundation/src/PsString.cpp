@@ -32,7 +32,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#if PX_WINDOWS_FAMILY
+#if PX_WINDOWS_FAMILY && !PX_MINGW_CLANG
 #pragma warning(push)
 #pragma warning(disable : 4996) // unsafe string functions
 #endif
@@ -180,6 +180,6 @@ void printFormatted(const char* format, ...)
 #pragma clang diagnostic pop
 #endif
 
-#if PX_WINDOWS_FAMILY
+#if PX_WINDOWS_FAMILY && !PX_MINGW_CLANG
 #pragma warning(pop)
 #endif

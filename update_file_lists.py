@@ -9,7 +9,7 @@ import time
 
 startTime = time.perf_counter()
 
-ignore = re.compile(r"^\./(?:cmake-build-(?:release|debug)|out/|libs/|\.git/)")
+ignore = re.compile(r"^\./\.git")
 cppsrc = re.compile(r"\.(?:cpp|hpp|hxx|c|h)$")
 
 
@@ -21,7 +21,7 @@ def updateProjectsCMakeLists(path, name):
     outfiles = []
     outwin = []
     outunix = []
-    include = []
+    include = set()
 
     for rawRoot, dirs, files in os.walk(path):
         root = rawRoot.replace(os.sep, '/')
@@ -29,8 +29,10 @@ def updateProjectsCMakeLists(path, name):
         if ignore.match(root):
             dirs.clear()
             continue
-
-        appendToInclude = False
+        
+        for dir in dirs:
+            if dir == "include":
+                include.add(posixpath.join(root, dir).strip())
 
         for file in files:
             if cppsrc.search(file):
@@ -43,8 +45,8 @@ def updateProjectsCMakeLists(path, name):
                 if "unix/" in filename:
                     out = outunix
                 
-                if file.endswith(".h") and not root in include:
-                    include.append(root)
+                if file.endswith(".h"):
+                    include.add(root)
                
 
                 out.append(filename)
@@ -56,7 +58,7 @@ def updateProjectsCMakeLists(path, name):
     for p in outfiles:
         outstr += "\t\"" + p + "\"\n"
 
-    outstr += ")\nif(WINDOWS)\n" + header + "\n"
+    outstr += ")\nif(WIN32)\n" + header + "\n"
 
     for p in outwin:
         outstr += "\t\"" + p + "\"\n"
@@ -68,7 +70,7 @@ def updateProjectsCMakeLists(path, name):
         outstr += "\t\"" + p + "\"\n"
 
     outstr += ")\nendif()\n"
-    outstr += "target_include_directories(" + name + " PUBLIC\n";
+    outstr += "target_include_directories(" + name + " PUBLIC\n"
     
     for p in include:
         outstr += "\t\"" + p + "\"\n"

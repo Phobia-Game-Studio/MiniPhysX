@@ -122,12 +122,12 @@ PX_CUDA_CALLABLE PX_FORCE_INLINE void order(T& x, T& y, E1& xe1, E1& ye1)
 	}
 }
 
-#if PX_GCC_FAMILY && !PX_EMSCRIPTEN  && !PX_LINUX
+#if PX_GCC_FAMILY && !PX_EMSCRIPTEN  && !PX_LINUX && !PX_MINGW_CLANG
 __attribute__((noreturn))
 #endif
     PX_INLINE void debugBreak()
 {
-#if PX_WINDOWS || PX_XBOXONE
+#if (PX_WINDOWS || PX_XBOXONE) && !PX_MINGW_CLANG
 	__debugbreak();
 #elif PX_ANDROID
 	raise(SIGTRAP); // works better than __builtin_trap. Proper call stack and can be continued.

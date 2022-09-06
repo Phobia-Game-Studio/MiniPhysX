@@ -63,7 +63,7 @@ PX_FORCE_INLINE bool isValidFloatV(const FloatV a)
 	{
 		return true;
 	}
-	
+
 	if (
 		(PxAbs((x - y) / x) < FLOAT_COMPONENTS_EQUAL_THRESHOLD) &&
 		(PxAbs((x - z) / x) < FLOAT_COMPONENTS_EQUAL_THRESHOLD) &&
@@ -102,7 +102,7 @@ PX_FORCE_INLINE bool isAligned16(void* a)
 #define ASSERT_ISFINITELENGTH(a) //PX_ASSERT(isFiniteLength(a))
 #else
 #define ASSERT_ISVALIDVEC3V(a)
-#define ASSERT_ISVALIDFLOATV(a) 
+#define ASSERT_ISVALIDFLOATV(a)
 #define ASSERT_ISALIGNED16(a)
 #define ASSERT_ISFINITELENGTH(a)
 #endif
@@ -1145,7 +1145,7 @@ PX_FORCE_INLINE Vec3V V3Abs(const Vec3V a)
 	return V3Max(a, V3Neg(a));
 }
 
-PX_FORCE_INLINE FloatV V3Dot(const Vec3V a, const Vec3V b)	
+PX_FORCE_INLINE FloatV V3Dot(const Vec3V a, const Vec3V b)
 {
 	ASSERT_ISVALIDVEC3V(a);
 	ASSERT_ISVALIDVEC3V(b);
@@ -1154,7 +1154,7 @@ PX_FORCE_INLINE FloatV V3Dot(const Vec3V a, const Vec3V b)
 	const __m128 t1 = _mm_shuffle_ps(t0, t0, _MM_SHUFFLE(1,0,3,2));	//	ay*by | ax*bx | aw*bw | az*bz
 	const __m128 t2 = _mm_add_ps(t0, t1);							//	ay*by + aw*bw | ax*bx + az*bz | aw*bw + ay*by | az*bz + ax*bx
 	const __m128 t3 = _mm_shuffle_ps(t2, t2, _MM_SHUFFLE(2,3,0,1));	//	ax*bx + az*bz | ay*by + aw*bw | az*bz + ax*bx | aw*bw + ay*by
-	return _mm_add_ps(t3, t2);										//	ax*bx + az*bz + ay*by + aw*bw 
+	return _mm_add_ps(t3, t2);										//	ax*bx + az*bz + ay*by + aw*bw
 																	//	ay*by + aw*bw + ax*bx + az*bz
 																	//	az*bz + ax*bx + aw*bw + ay*by
 																	//	aw*bw + ay*by + az*bz + ax*bx
@@ -1471,7 +1471,7 @@ PX_FORCE_INLINE Vec3V V3Cos(const Vec3V a)
 	Result = V3ScaleAdd(V20, C10, Result);
 	Result = V3ScaleAdd(V22, C11, Result);
 
-	ASSERT_ISVALIDVEC3V(Result); 
+	ASSERT_ISVALIDVEC3V(Result);
 	return Result;
 }
 
@@ -2942,7 +2942,7 @@ PX_FORCE_INLINE VecI32V VecI32V_Sel(const BoolV c, const VecI32VArg a, const Vec
 PX_FORCE_INLINE VecShiftV VecI32V_PrepareShift(const VecI32VArg shift)
 {
 	VecShiftV preparedShift;
-	preparedShift.shift = _mm_or_ps(_mm_andnot_ps(BTFFF(), VecI32V_Zero()), _mm_and_ps(BTFFF(), shift)); 
+	preparedShift.shift = _mm_or_ps(_mm_andnot_ps(BTFFF(), VecI32V_Zero()), _mm_and_ps(BTFFF(), shift));
 	return preparedShift;
 }
 
@@ -3038,20 +3038,33 @@ PX_FORCE_INLINE VecU16V V4U16LoadUnaligned(VecU16V* addr)
 }
 
 // unsigned compares are not supported on x86
+// unsigned compares are not supported on x86
+#if PX_MINGW_CLANG
+PX_FORCE_INLINE VecU16V V4U16CompareGt(PxM128 a, PxM128 b)
+{
+    PxM128 result;
+#else
 PX_FORCE_INLINE VecU16V V4U16CompareGt(VecU16V a, VecU16V b)
 {
-	// _mm_cmpgt_epi16 doesn't work for unsigned values unfortunately
-	// return m128_I2F(_mm_cmpgt_epi16(internalWindowsSimd::m128_F2I(a), internalWindowsSimd::m128_F2I(b)));
-	VecU16V result;
-	result.m128_u16[0] = PxU16((a).m128_u16[0] > (b).m128_u16[0]);
-	result.m128_u16[1] = PxU16((a).m128_u16[1] > (b).m128_u16[1]);
-	result.m128_u16[2] = PxU16((a).m128_u16[2] > (b).m128_u16[2]);
-	result.m128_u16[3] = PxU16((a).m128_u16[3] > (b).m128_u16[3]);
-	result.m128_u16[4] = PxU16((a).m128_u16[4] > (b).m128_u16[4]);
-	result.m128_u16[5] = PxU16((a).m128_u16[5] > (b).m128_u16[5]);
-	result.m128_u16[6] = PxU16((a).m128_u16[6] > (b).m128_u16[6]);
-	result.m128_u16[7] = PxU16((a).m128_u16[7] > (b).m128_u16[7]);
-	return result;
+    VecU16V result;
+#endif
+    // _mm_cmpgt_epi16 doesn't work for unsigned values unfortunately
+    // return m128_I2F(_mm_cmpgt_epi16(internalWindowsSimd::m128_F2I(a), internalWindowsSimd::m128_F2I(b)));
+
+    result.m128_u16[0] = PxU16((a).m128_u16[0] > (b).m128_u16[0]);
+    result.m128_u16[1] = PxU16((a).m128_u16[1] > (b).m128_u16[1]);
+    result.m128_u16[2] = PxU16((a).m128_u16[2] > (b).m128_u16[2]);
+    result.m128_u16[3] = PxU16((a).m128_u16[3] > (b).m128_u16[3]);
+    result.m128_u16[4] = PxU16((a).m128_u16[4] > (b).m128_u16[4]);
+    result.m128_u16[5] = PxU16((a).m128_u16[5] > (b).m128_u16[5]);
+    result.m128_u16[6] = PxU16((a).m128_u16[6] > (b).m128_u16[6]);
+    result.m128_u16[7] = PxU16((a).m128_u16[7] > (b).m128_u16[7]);
+
+#if PX_MINGW_CLANG
+    return result.m128;
+#else
+    return result;
+#endif
 }
 
 PX_FORCE_INLINE VecU16V V4I16CompareGt(VecU16V a, VecU16V b)
@@ -3060,7 +3073,11 @@ PX_FORCE_INLINE VecU16V V4I16CompareGt(VecU16V a, VecU16V b)
 	    _mm_cmpgt_epi16(internalWindowsSimd::m128_F2I(a), internalWindowsSimd::m128_F2I(b)));
 }
 
+#if PX_MINGW_CLANG
+PX_FORCE_INLINE Vec4V Vec4V_From_VecU32V(PxM128 a)
+#else
 PX_FORCE_INLINE Vec4V Vec4V_From_VecU32V(VecU32V a)
+#endif
 {
 	Vec4V result = V4LoadXYZW(PxF32(a.m128_u32[0]), PxF32(a.m128_u32[1]), PxF32(a.m128_u32[2]), PxF32(a.m128_u32[3]));
 	return result;
@@ -3112,12 +3129,22 @@ PX_FORCE_INLINE Vec4V V4SplatElement(Vec4V a)
 
 PX_FORCE_INLINE VecU32V U4LoadXYZW(PxU32 x, PxU32 y, PxU32 z, PxU32 w)
 {
+#if PX_MINGW_CLANG
+    PxM128 result;
+#else
 	VecU32V result;
-	result.m128_u32[0] = x;
+#endif
+
+    result.m128_u32[0] = x;
 	result.m128_u32[1] = y;
 	result.m128_u32[2] = z;
 	result.m128_u32[3] = w;
-	return result;
+
+#if PX_MINGW_CLANG
+	return result.m128;
+#else
+    return result;
+#endif
 }
 
 PX_FORCE_INLINE Vec4V V4ConvertFromI32V(const VecI32V in)

@@ -331,10 +331,16 @@ void ThreadImpl::setName(const char* name)
 		{
 			RaiseException(NS_MS_VC_EXCEPTION, 0, sizeof(info) / sizeof(ULONG_PTR), (ULONG_PTR*)&info);
 		}
+#if !PX_MINGW_CLANG
 		__except (EXCEPTION_EXECUTE_HANDLER)
 		{
 			// this runs if not attached to a debugger (thus not really naming the thread)
 		}
+#else
+        __catch(std::exception&) {
+
+        }
+#endif
 	}
 }
 

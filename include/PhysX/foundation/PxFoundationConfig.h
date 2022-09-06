@@ -39,13 +39,13 @@
 #if defined PX_PHYSX_STATIC_LIB
 	#define PX_FOUNDATION_API
 #else
-	#if PX_WINDOWS && !defined(__CUDACC__)
+	#if PX_WINDOWS && !defined(__CUDACC__) && !PX_MINGW_CLANG
 		#if defined PX_PHYSX_FOUNDATION_EXPORTS
 			#define PX_FOUNDATION_API __declspec(dllexport)
 		#else
 			#define PX_FOUNDATION_API __declspec(dllimport)
 		#endif
-	#elif PX_UNIX_FAMILY
+	#elif PX_UNIX_FAMILY || PPX_MINGW_CLANG
 		#define PX_FOUNDATION_API PX_UNIX_EXPORT
 	#else
 		#define PX_FOUNDATION_API

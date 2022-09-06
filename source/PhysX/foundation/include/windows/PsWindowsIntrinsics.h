@@ -40,19 +40,24 @@
 #error "This file should only be included by Windows builds!!"
 #endif
 
-#pragma warning(push)
-//'symbol' is not defined as a preprocessor macro, replacing with '0' for 'directives'
-#pragma warning(disable : 4668)
-#if PX_VC == 10
-#pragma warning(disable : 4987) // nonstandard extension used: 'throw (...)'
-#endif
-#include <intrin.h>
-#pragma warning(pop)
+#if !PX_MINGW_CLANG
+    #pragma warning(push)
+    //'symbol' is not defined as a preprocessor macro, replacing with '0' for 'directives'
+    #pragma warning(disable : 4668)
+    #if PX_VC == 10
+    #pragma warning(disable : 4987) // nonstandard extension used: 'throw (...)'
+    #endif
+    #include <intrin.h>
+    #pragma warning(pop)
 
-#pragma warning(push)
-#pragma warning(disable : 4985) // 'symbol name': attributes not present on previous declaration
-#include <math.h>
-#pragma warning(pop)
+    #pragma warning(push)
+    #pragma warning(disable : 4985) // 'symbol name': attributes not present on previous declaration
+    #include <math.h>
+    #pragma warning(pop)
+#else
+    #include <intrin.h>
+    #include <math.h>
+#endif
 
 #include <float.h>
 // do not include for ARM target
@@ -60,8 +65,10 @@
 #include <mmintrin.h>
 #endif
 
+#if !PX_MINGW_CLANG
 #pragma intrinsic(_BitScanForward)
 #pragma intrinsic(_BitScanReverse)
+#endif
 
 namespace physx
 {

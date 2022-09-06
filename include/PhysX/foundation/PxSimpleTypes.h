@@ -44,7 +44,7 @@
 // header
 #endif
 
-#if PX_LINUX
+#if PX_LINUX || PX_MINGW_CLANG
 #define __STDC_LIMIT_MACROS
 #endif
 
