@@ -35,7 +35,7 @@
 
 // define API function declaration
 #if !defined PX_PHYSX_STATIC_LIB 
-	#if PX_WINDOWS && !PPX_MINGW_CLANG
+	#if PX_WINDOWS && !PX_MINGW_CLANG
 		#if defined PX_PHYSX_COOKING_EXPORTS
 			#define PX_PHYSX_COOKING_API __declspec(dllexport)
 		#else
