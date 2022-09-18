@@ -3464,9 +3464,13 @@ PX_FORCE_INLINE VecI32V VecI32V_ReinterpretFrom_Vec4V(Vec4V a)
 template <int index>
 PX_FORCE_INLINE BoolV BSplatElement(BoolV a)
 {
-	if(index < 2)
+	if(index == 0)
 	{
-		return vdupq_lane_u32(vget_low_u32(a), index);
+		return vdupq_lane_u32(vget_low_u32(a), 0);
+	}
+	else if(index == 1)
+    {
+		return vdupq_lane_u32(vget_low_u32(a), 1);
 	}
 	else if(index == 2)
 	{
@@ -3481,9 +3485,13 @@ PX_FORCE_INLINE BoolV BSplatElement(BoolV a)
 template <int index>
 PX_FORCE_INLINE VecU32V V4U32SplatElement(VecU32V a)
 {
-	if(index < 2)
+	if(index == 0)
 	{
-		return vdupq_lane_u32(vget_low_u32(a), index);
+		return vdupq_lane_u32(vget_low_u32(a), 0);
+	}
+	else if(index == 1)
+	{
+		return vdupq_lane_u32(vget_low_u32(a), 1);
 	}
 	else if(index == 2)
 	{
@@ -3498,9 +3506,13 @@ PX_FORCE_INLINE VecU32V V4U32SplatElement(VecU32V a)
 template <int index>
 PX_FORCE_INLINE Vec4V V4SplatElement(Vec4V a)
 {
-	if(index < 2)
+	if(index == 0)
 	{
-		return vdupq_lane_f32(vget_low_f32(a), index);
+		return vdupq_lane_f32(vget_low_f32(a), 0);
+	}
+	else if(index == 1)
+	{
+		return vdupq_lane_f32(vget_low_f32(a), 1);
 	}
 	else if(index == 2)
 	{
