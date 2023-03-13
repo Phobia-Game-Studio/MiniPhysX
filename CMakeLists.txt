@@ -17,4 +17,8 @@ endif()
 add_library(PhysX STATIC)
 include(_source_files.cmake)
 
+if(APPLE)
 target_compile_options(PhysX PRIVATE -Wall -Wno-unused-local-typedef -Wno-unused-private-field -Wno-macro-redefined -Wno-float-equal)
+else()
+target_compile_options(PhysX PRIVATE -Wall -Wno-misleading-indentation -Wno-unused-local-typedef -Wno-unused-private-field -Wno-macro-redefined -Wno-float-equal)
+endif()
