@@ -317,6 +317,8 @@ void ThreadImpl::setName(const char* name)
 {
 	getThread(this)->name = name;
 
+//not working on MSYS2 CLANG64, so ignore it for now
+#if !PX_MINGW_CLANG
 	if (getThread(this)->state == _ThreadImpl::Started)
 	{
 		THREADNAME_INFO info;
@@ -331,17 +333,12 @@ void ThreadImpl::setName(const char* name)
 		{
 			RaiseException(NS_MS_VC_EXCEPTION, 0, sizeof(info) / sizeof(ULONG_PTR), (ULONG_PTR*)&info);
 		}
-#if !PX_MINGW_CLANG
 		__except (EXCEPTION_EXECUTE_HANDLER)
 		{
 			// this runs if not attached to a debugger (thus not really naming the thread)
 		}
-#else
-        __catch(std::exception&) {
-
-        }
-#endif
 	}
+#endif
 }
 
 void ThreadImpl::setPriority(ThreadPriority::Enum prio)
