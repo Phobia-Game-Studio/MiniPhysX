@@ -318,7 +318,7 @@ void ThreadImpl::setName(const char* name)
 	getThread(this)->name = name;
 
 //not working on MSYS2 CLANG64, so ignore it for now
-#if !PX_MINGW_CLANG
+#if !PX_MINGW
 	if (getThread(this)->state == _ThreadImpl::Started)
 	{
 		THREADNAME_INFO info;

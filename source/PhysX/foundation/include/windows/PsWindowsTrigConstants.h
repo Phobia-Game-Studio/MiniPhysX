@@ -39,7 +39,7 @@ namespace aos
 
 #define PX_GLOBALCONST extern const __declspec(selectany)
 
-#if PX_MINGW_CLANG
+#if PX_MINGW
     struct PX_VECTORF32
     {
         float f[4];

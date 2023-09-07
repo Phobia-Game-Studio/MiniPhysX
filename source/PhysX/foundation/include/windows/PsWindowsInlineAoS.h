@@ -3039,7 +3039,7 @@ PX_FORCE_INLINE VecU16V V4U16LoadUnaligned(VecU16V* addr)
 
 // unsigned compares are not supported on x86
 // unsigned compares are not supported on x86
-#if PX_MINGW_CLANG
+#if PX_MINGW
 PX_FORCE_INLINE VecU16V V4U16CompareGt(PxM128 a, PxM128 b)
 {
     PxM128 result;
@@ -3060,7 +3060,7 @@ PX_FORCE_INLINE VecU16V V4U16CompareGt(VecU16V a, VecU16V b)
     result.m128_u16[6] = PxU16((a).m128_u16[6] > (b).m128_u16[6]);
     result.m128_u16[7] = PxU16((a).m128_u16[7] > (b).m128_u16[7]);
 
-#if PX_MINGW_CLANG
+#if PX_MINGW
     return result.m128;
 #else
     return result;
@@ -3073,7 +3073,7 @@ PX_FORCE_INLINE VecU16V V4I16CompareGt(VecU16V a, VecU16V b)
 	    _mm_cmpgt_epi16(internalWindowsSimd::m128_F2I(a), internalWindowsSimd::m128_F2I(b)));
 }
 
-#if PX_MINGW_CLANG
+#if PX_MINGW
 PX_FORCE_INLINE Vec4V Vec4V_From_VecU32V(PxM128 a)
 #else
 PX_FORCE_INLINE Vec4V Vec4V_From_VecU32V(VecU32V a)
@@ -3129,7 +3129,7 @@ PX_FORCE_INLINE Vec4V V4SplatElement(Vec4V a)
 
 PX_FORCE_INLINE VecU32V U4LoadXYZW(PxU32 x, PxU32 y, PxU32 z, PxU32 w)
 {
-#if PX_MINGW_CLANG
+#if PX_MINGW
     PxM128 result;
 #else
 	VecU32V result;
@@ -3140,7 +3140,7 @@ PX_FORCE_INLINE VecU32V U4LoadXYZW(PxU32 x, PxU32 y, PxU32 z, PxU32 w)
 	result.m128_u32[2] = z;
 	result.m128_u32[3] = w;
 
-#if PX_MINGW_CLANG
+#if PX_MINGW
 	return result.m128;
 #else
     return result;

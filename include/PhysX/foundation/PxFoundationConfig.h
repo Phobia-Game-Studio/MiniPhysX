@@ -39,7 +39,7 @@
 #if defined PX_PHYSX_STATIC_LIB
 	#define PX_FOUNDATION_API
 #else
-	#if PX_WINDOWS && !defined(__CUDACC__) && !PX_MINGW_CLANG
+	#if PX_WINDOWS && !defined(__CUDACC__) && !PX_MINGW
 		#if defined PX_PHYSX_FOUNDATION_EXPORTS
 			#define PX_FOUNDATION_API __declspec(dllexport)
 		#else

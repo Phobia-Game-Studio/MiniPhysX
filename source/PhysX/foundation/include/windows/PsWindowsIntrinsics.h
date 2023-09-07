@@ -40,7 +40,7 @@
 #error "This file should only be included by Windows builds!!"
 #endif
 
-#if !PX_MINGW_CLANG
+#if !PX_MINGW
     #pragma warning(push)
     //'symbol' is not defined as a preprocessor macro, replacing with '0' for 'directives'
     #pragma warning(disable : 4668)
@@ -65,7 +65,7 @@
 #include <mmintrin.h>
 #endif
 
-#if !PX_MINGW_CLANG
+#if !PX_MINGW
 #pragma intrinsic(_BitScanForward)
 #pragma intrinsic(_BitScanReverse)
 #endif

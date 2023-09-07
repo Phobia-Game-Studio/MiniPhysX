@@ -1,6 +1,9 @@
 cmake_minimum_required (VERSION 3.13 FATAL_ERROR)
 
 option(PX_CLANG "use clang" ON)
+option(PX_GCC "use gcc" OFF)
+option(PX_MINGW "use MinGW/MSYS2" OFF)
+option(PX_REDEFINE_WINDOWS "mark this ON if you link this library statically and include windows on your own" OFF)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_COMPILE_FEATURES cxx_std_14)
@@ -10,15 +13,24 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG")
 
 add_definitions(-DPX_PHYSX_STATIC_LIB)
 
-if(PX_CLANG)
-    add_definitions(-DPX_CLANG)
-endif()
-
 add_library(PhysX STATIC)
 include(_source_files.cmake)
 
+target_compile_definitions(PhysX PRIVATE PX_CLANG=$<BOOL:${PX_CLANG}> PX_GCC=$<BOOL:${PX_GCC}> PX_MINGW=$<BOOL:${PX_MINGW}>
+        PX_REDEFINE_WINDOWS=$<BOOL:${PX_REDEFINE_WINDOWS}>)
+
 if(APPLE)
-    target_compile_options(PhysX PRIVATE -Wall -Wno-unused-local-typedef -Wno-unused-private-field -Wno-macro-redefined -Wno-float-equal -Wno-bitwise-instead-of-logical -Wno-unused-but-set-variable)
+    target_compile_options(PhysX PRIVATE -Wall -Wno-unused-local-typedef -Wno-unused-private-field -Wno-macro-redefined
+            -Wno-float-equal -Wno-bitwise-instead-of-logical -Wno-unused-but-set-variable)
 else()
-    target_compile_options(PhysX PRIVATE -Wall -Wno-misleading-indentation -Wno-unused-local-typedef -Wno-unused-private-field -Wno-macro-redefined -Wno-float-equal -Wno-bitwise-instead-of-logical -Wno-unused-but-set-variable)
+    if (PX_GCC)
+        target_compile_options(PhysX PRIVATE -Wall
+                -Wno-misleading-indentation -Wno-float-equal -Wno-unused-but-set-variable -Wno-maybe-uninitialized
+                -Wno-invalid-offsetof  -Wno-uninitialized -Wno-unknown-pragmas -Wno-restrict -Wno-class-memaccess
+                -Wno-nonnull -Wno-mismatched-new-delete -Wno-sign-compare -Wno-reorder)
+    else()
+        target_compile_options(PhysX PRIVATE -Wall -Wno-misleading-indentation -Wno-unused-local-typedef
+                -Wno-unused-private-field -Wno-macro-redefined -Wno-float-equal -Wno-bitwise-instead-of-logical
+                -Wno-unused-but-set-variable)
+    endif()
 endif()

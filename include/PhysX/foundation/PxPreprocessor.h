@@ -140,8 +140,8 @@ SIMD defines
 /**
 define anything not defined on this platform to 0
 */
-#ifndef PX_MINGW_CLANG
-#define PX_MINGW_CLANG 0
+#ifndef PX_MINGW
+#define PX_MINGW 0
 #endif
 #ifndef PX_VC
 #define PX_VC 0
@@ -277,20 +277,20 @@ Assert macro
 DLL export macros
 */
 #ifndef PX_C_EXPORT
-#if (PX_WINDOWS_FAMILY || PX_LINUX) && !PX_MINGW_CLANG
+#if (PX_WINDOWS_FAMILY || PX_LINUX) && !PX_MINGW
 #define PX_C_EXPORT extern "C"
 #else
 #define PX_C_EXPORT
 #endif
 #endif
 
-#if (PX_UNIX_FAMILY && __GNUC__ >= 4) || PX_MINGW_CLANG
+#if (PX_UNIX_FAMILY && __GNUC__ >= 4) || PX_MINGW
 #define PX_UNIX_EXPORT __attribute__((visibility("default")))
 #else
 #define PX_UNIX_EXPORT
 #endif
 
-#if PX_WINDOWS_FAMILY && !PX_MINGW_CLANG
+#if PX_WINDOWS_FAMILY && !PX_MINGW
 #define PX_DLL_EXPORT __declspec(dllexport)
 #define PX_DLL_IMPORT __declspec(dllimport)
 #else
@@ -302,7 +302,7 @@ DLL export macros
 Calling convention
 */
 #ifndef PX_CALL_CONV
-#if PX_MICROSOFT_FAMILY && !PX_MINGW_CLANG
+#if PX_MICROSOFT_FAMILY && !PX_MINGW
 #define PX_CALL_CONV __cdecl
 #else
 #define PX_CALL_CONV
@@ -327,7 +327,7 @@ Pack macros - disabled on SPU because they are not supported
 Inline macro
 */
 #define PX_INLINE inline
-#if PX_MICROSOFT_FAMILY && !PX_MINGW_CLANG
+#if PX_MICROSOFT_FAMILY && !PX_MINGW
 #pragma inline_depth(255)
 #endif
 
@@ -347,7 +347,7 @@ Force inline macro
 /**
 Noinline macro
 */
-#if PX_MICROSOFT_FAMILY && !PX_MINGW_CLANG
+#if PX_MICROSOFT_FAMILY && !PX_MINGW
 #define PX_NOINLINE __declspec(noinline)
 #elif PX_GCC_FAMILY
 #define PX_NOINLINE __attribute__((noinline))
@@ -367,7 +367,7 @@ Restrict macro
 /**
 Noalias macro
 */
-#if PX_MICROSOFT_FAMILY && !PX_MINGW_CLANG
+#if PX_MICROSOFT_FAMILY && !PX_MINGW
 #define PX_NOALIAS __declspec(noalias)
 #else
 #define PX_NOALIAS
@@ -385,7 +385,7 @@ This declaration style is parsed correctly by Visual Assist.
 
 */
 #ifndef PX_ALIGN
-#if PX_MICROSOFT_FAMILY && !PX_MINGW_CLANG
+#if PX_MICROSOFT_FAMILY && !PX_MINGW
 #define PX_ALIGN(alignment, decl) __declspec(align(alignment)) decl
 #define PX_ALIGN_PREFIX(alignment) __declspec(align(alignment))
 #define PX_ALIGN_SUFFIX(alignment)

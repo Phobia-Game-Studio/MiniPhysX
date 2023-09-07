@@ -40,6 +40,45 @@
 #error "Only include windows.h through this file!!"
 #endif
 
+#ifdef PX_REDEFINE_WINDOWS
+#undef _WIN32_WINNT
+#undef NOGDICAPMASKS
+#undef NOVIRTUALKEYCODES
+#undef NOWINMESSAGES
+#undef NOWINSTYLES
+#undef NOSYSMETRICS
+#undef NOMENUS
+#undef NOICONS
+#undef NOKEYSTATES
+#undef NOSYSCOMMANDS
+#undef NORASTEROPS
+#undef NOSHOWWINDOW
+#undef NOATOM
+#undef NOCLIPBOARD
+#undef NOCOLOR
+#undef NOCTLMGR
+#undef NODRAWTEXT
+#undef NOGDI
+#undef NOMB
+#undef NOMEMMGR
+#undef NOMETAFILE
+#undef NOMINMAX
+#undef NOOPENFILE
+#undef NOSCROLL
+#undef NOSERVICE
+#undef NOSOUND
+#undef NOTEXTMETRIC
+#undef NOWH
+#undef NOWINOFFSETS
+#undef NOCOMM
+#undef NOKANJI
+#undef NOHELP
+#undef NOPROFILER
+#undef NODEFERWINDOWPOS
+#undef NOMCX
+#undef WIN32_LEAN_AND_MEAN
+#endif
+
 // We only support >= Windows XP, and we need this for critical section and
 // Setting this hides some important APIs (e.g. LoadPackagedLibrary), so don't do it
 #if !PX_UWP
@@ -92,7 +131,7 @@
 #define NOMSG
 #endif
 
-#if !PX_MINGW_CLANG
+#if !PX_MINGW
 #pragma warning(push)
 #pragma warning(disable : 4668) //'symbol' is not defined as a preprocessor macro, replacing with '0' for 'directives'
 #include <windows.h>

@@ -43,7 +43,7 @@ namespace shdfnd
 namespace aos
 {
 
-#if PX_MINGW_CLANG
+#if PX_MINGW
     union __declspec(__aligned__(16)) PxM128 {
         float m128_f32[4] = {};
         uint16_t m128_u16[8];

@@ -35,13 +35,13 @@
 
 // define API function declaration
 #if !defined PX_PHYSX_STATIC_LIB 
-	#if PX_WINDOWS && !PX_MINGW_CLANG
+	#if PX_WINDOWS && !PX_MINGW
 		#if defined PX_PHYSX_COOKING_EXPORTS
 			#define PX_PHYSX_COOKING_API __declspec(dllexport)
 		#else
 			#define PX_PHYSX_COOKING_API __declspec(dllimport)
 		#endif
-	#elif PX_UNIX_FAMILY || PX_MINGW_CLANG
+	#elif PX_UNIX_FAMILY || PX_MINGW
 		#define PX_PHYSX_COOKING_API PX_UNIX_EXPORT
 	#endif
 #endif

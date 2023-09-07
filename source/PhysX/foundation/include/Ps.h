@@ -37,7 +37,7 @@
 /**
 Platform specific defines
 */
-#if (PX_WINDOWS_FAMILY || PX_XBOXONE) && !PX_MINGW_CLANG
+#if (PX_WINDOWS_FAMILY || PX_XBOXONE) && !PX_MINGW
 #pragma intrinsic(memcmp)
 #pragma intrinsic(memcpy)
 #pragma intrinsic(memset)
