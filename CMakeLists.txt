@@ -27,7 +27,8 @@ else()
         target_compile_options(PhysX PRIVATE -Wall
                 -Wno-misleading-indentation -Wno-float-equal -Wno-unused-but-set-variable -Wno-maybe-uninitialized
                 -Wno-invalid-offsetof  -Wno-uninitialized -Wno-unknown-pragmas -Wno-restrict -Wno-class-memaccess
-                -Wno-nonnull -Wno-mismatched-new-delete -Wno-sign-compare -Wno-reorder)
+                -Wno-nonnull -Wno-mismatched-new-delete -Wno-sign-compare -Wno-reorder -Wno-array-bounds
+                -Wno-stringop-overflow -Wno-strict-aliasing -fno-strict-aliasing)
     else()
         target_compile_options(PhysX PRIVATE -Wall -Wno-misleading-indentation -Wno-unused-local-typedef
                 -Wno-unused-private-field -Wno-macro-redefined -Wno-float-equal -Wno-bitwise-instead-of-logical
