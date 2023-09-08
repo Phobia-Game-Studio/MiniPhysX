@@ -1,7 +1,5 @@
 cmake_minimum_required (VERSION 3.13 FATAL_ERROR)
 
-option(PX_CLANG "use clang" ON)
-option(PX_GCC "use gcc" OFF)
 option(PX_MINGW "use MinGW/MSYS2" OFF)
 option(PX_REDEFINE_WINDOWS "mark this ON if you link this library statically and include windows on your own" OFF)
 
@@ -16,7 +14,15 @@ add_definitions(-DPX_PHYSX_STATIC_LIB)
 add_library(PhysX STATIC)
 include(_source_files.cmake)
 
-target_compile_definitions(PhysX PRIVATE PX_CLANG=$<BOOL:${PX_CLANG}> PX_GCC=$<BOOL:${PX_GCC}> PX_MINGW=$<BOOL:${PX_MINGW}>
+if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+    set(PX_GCC ON)
+    set(PX_CLANG OFF)
+elseif (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+    set(PX_CLANG ON)
+    set(PX_GCC OFF)
+endif()
+
+target_compile_definitions(PhysX PRIVATE PX_MINGW=$<BOOL:${PX_MINGW}>
         PX_REDEFINE_WINDOWS=$<BOOL:${PX_REDEFINE_WINDOWS}>)
 
 if(APPLE)
