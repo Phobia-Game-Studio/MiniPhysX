@@ -18,6 +18,11 @@ endif()
 add_library(PhysX STATIC)
 include(_source_files.cmake)
 
+if (PX_ANDROID)
+    find_file(ANDROID_CPU_FEATURES cpu-features.c HINTS ${PX_ANDROID_NDK}/sources/android/cpufeatures)
+	target_sources(PhysX PRIVATE ${ANDROID_CPU_FEATURES})
+endif()
+
 if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     set(PX_GCC ON)
     set(PX_CLANG OFF)
