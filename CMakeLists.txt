@@ -1,6 +1,7 @@
 cmake_minimum_required (VERSION 3.13 FATAL_ERROR)
 
 option(PX_MINGW "use MinGW/MSYS2" OFF)
+option(PX_DISABLE_WARN "disable compiler warnings" OFF)
 option(PX_REDEFINE_WINDOWS "mark this ON if you link this library statically and include windows on your own" OFF)
 option(PX_SUPPORT_PVD "support PhysX Visual Debugger" ON)
 
@@ -34,19 +35,31 @@ endif()
 target_compile_definitions(PhysX PRIVATE PX_MINGW=$<BOOL:${PX_MINGW}>
         PX_REDEFINE_WINDOWS=$<BOOL:${PX_REDEFINE_WINDOWS}>)
 
-if(APPLE)
-    target_compile_options(PhysX PRIVATE -Wall -Wno-unused-local-typedef -Wno-unused-private-field -Wno-macro-redefined
-            -Wno-float-equal -Wno-bitwise-instead-of-logical -Wno-unused-but-set-variable)
-else()
-    if (PX_GCC)
-        target_compile_options(PhysX PRIVATE -Wall
-                -Wno-misleading-indentation -Wno-float-equal -Wno-unused-but-set-variable -Wno-maybe-uninitialized
-                -Wno-invalid-offsetof  -Wno-uninitialized -Wno-unknown-pragmas -Wno-restrict -Wno-class-memaccess
-                -Wno-nonnull -Wno-mismatched-new-delete -Wno-sign-compare -Wno-reorder -Wno-array-bounds
-                -Wno-stringop-overflow -Wno-strict-aliasing -fno-strict-aliasing)
+if(PX_DISABLE_WARN)
+    if(APPLE)
+        target_compile_options(PhysX PRIVATE -Wno-everything)
     else()
-        target_compile_options(PhysX PRIVATE -Wall -Wno-misleading-indentation -Wno-unused-local-typedef
-                -Wno-unused-private-field -Wno-macro-redefined -Wno-float-equal -Wno-bitwise-instead-of-logical
-                -Wno-unused-but-set-variable)
+        if (PX_GCC)
+            target_compile_options(PhysX PRIVATE -w)
+        else()
+            target_compile_options(PhysX PRIVATE -Wno-everything)
+        endif()
+    endif()
+else()
+    if(APPLE)
+        target_compile_options(PhysX PRIVATE -Wall -Wno-unused-local-typedef -Wno-unused-private-field -Wno-macro-redefined
+                -Wno-float-equal -Wno-bitwise-instead-of-logical -Wno-unused-but-set-variable)
+    else()
+        if (PX_GCC)
+            target_compile_options(PhysX PRIVATE -Wall
+                    -Wno-misleading-indentation -Wno-float-equal -Wno-unused-but-set-variable -Wno-maybe-uninitialized
+                    -Wno-invalid-offsetof  -Wno-uninitialized -Wno-unknown-pragmas -Wno-restrict -Wno-class-memaccess
+                    -Wno-nonnull -Wno-mismatched-new-delete -Wno-sign-compare -Wno-reorder -Wno-array-bounds
+                    -Wno-stringop-overflow -Wno-strict-aliasing -fno-strict-aliasing)
+        else()
+            target_compile_options(PhysX PRIVATE -Wall -Wno-misleading-indentation -Wno-unused-local-typedef
+                    -Wno-unused-private-field -Wno-macro-redefined -Wno-float-equal -Wno-bitwise-instead-of-logical
+                    -Wno-unused-but-set-variable)
+        endif()
     endif()
 endif()
